@@ -1,0 +1,95 @@
+body {
+    font-family: 'PPNeueMontreal', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+
+    /* largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #ffffff; /* cor de fundo da barra de rolagem */
+  }  ::-webkit-scrollbar-thumb {
+    background: #bfc1c2;  border-radius: 50px;/* cor do indicador da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bfc1c2; /* cor do indicador da barra de rolagem ao passar o mouse */
+  }
+  .hero-section {
+    position: relative;
+    height: 850px;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 400%; /* Quatro imagens */
+    height: 100%;
+    animation: slide 8s infinite;
+  }
+  
+  .carousel img {
+    width: 100vw; /* Cada imagem ocupa 100% da largura da viewport */
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0%, 25% {
+      transform: translateX(0%);
+    }
+    25.01%, 50% {
+      transform: translateX(-100%);
+    }
+    50.01%, 75% {
+      transform: translateX(-200%);
+    }
+    75.01%, 100% {
+      transform: translateX(-300%);
+    }
+  }
+  
+  .hero-text {
+    width: 600px;
+    position: relative;
+    line-height: 80px;
+    z-index: 2;
+    top: 30%;
+    color: white;
+    margin-left: 8%;
+    padding: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 5rem;
+    margin: 0;
+    font-weight: 900;
+    text-align: left;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 0 0;
+    text-align: left;
+    font-weight: 100;
+    line-height: 25px;
+  }
+  #btn-learn-more{
+    background-color: #3387b1;
+    padding: 20px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    transition: 0.2s;
+    border-radius: 10px;
+  }
+  #btn-learn-more:hover{
+    background-color: #1e4f68;
+    transition: 0.2s;
+  }

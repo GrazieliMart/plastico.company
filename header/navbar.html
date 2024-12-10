@@ -1,0 +1,53 @@
+<!-- navbar.html -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>navbar</title>
+ </head>
+ <body>
+  <header>
+    <nav>
+      <div class="div-image">
+       <a href="index.html"> <img src="assets/logo.png" alt="Logo"></a>
+      </div>
+      <ul>
+        <li><a href="#home">Plastico Company ®</a></li>
+        <li><a href="#about">Sustainability</a></li>
+        <li><a href="#services">Our Collaborators</a></li>
+        <li><a href="#contact">Contact Us  <i class="bi bi-arrow-up-right"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const nav = document.querySelector("nav");
+      const navImage = document.querySelector(".div-image img");
+    
+      let lastScrollTop = 0;
+    
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+        if (currentScroll > lastScrollTop) {
+          // Rolando para baixo
+          nav.style.margin = "10px";
+          navImage.style.width = "40px";
+        } else {
+          // Rolando para cima
+          if (currentScroll === 0) {
+            nav.style.margin = "20px";
+            navImage.style.width = "70px";
+          }
+        }
+    
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Evita valores negativos
+      });
+    });
+    </script>
+ </body>
+ </html>
+
+  

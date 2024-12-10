@@ -1,0 +1,44 @@
+/* navbar.css */
+nav {
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 40%;
+  justify-content: space-evenly;
+  width: 100%;
+  transition: margin 0.3s ease, background-color 0.3s ease;
+}
+
+nav .div-image img {
+  width: 70px;
+  transition: width 0.3s ease;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  padding: 5px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #ffffff6e;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.2s;
+  border-radius: 10px;
+}

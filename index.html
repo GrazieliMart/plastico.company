@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plastico © Recycled Material Plastic Design</title>
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    /* Centralizar conteúdo */
+    .section {
+      padding: 2em;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section p {
+    color: #443c3c;
+    font-family: 'PPNeueMontreal', sans-serif;
+    margin-bottom: 3em;
+    font-size: 20px;
+}
+    .services, .gallery, .testimonials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+    }
+    .services .service, .gallery .image, .testimonials .testimonial {
+      width: 100%;
+      max-width: 600px;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .contact-form button {
+      background: #4CAF50;
+      color: white;
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar">Navbar - Add your links here</div>
+  <div class="hero-section">
+    <div class="carousel" id="carousel">
+      <img src="assets/hero-section (1).png" alt="Slide 1">
+      <img src="assets/hero-section (3).png" alt="Slide 2">
+      <img src="assets/hero-image.png" alt="Slide 3">
+    </div>
+    <div class="carousel-buttons">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+    <div class="hero-text">
+      <h1>Recreating with Recycled Plastic</h1>
+      <h2>Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.</h2>
+    </div>
+  </div>
+  
+    <script>
+     const carousel = document.getElementById('carousel');
+const images = document.querySelectorAll('.carousel img');
+const totalImages = images.length;
+let index = 0;
+
+function updateCarousel() {
+  const offset = -index * 100; // Calcula a posição do carrossel
+  carousel.style.transform = `translateX(${offset}%)`;
+}
+
+function nextSlide() {
+  index = (index + 1) % totalImages; // Move para o próximo slide
+  updateCarousel();
+}
+
+function prevSlide() {
+  index = (index - 1 + totalImages) % totalImages; // Volta ao slide anterior
+  updateCarousel();
+}
+
+document.getElementById('next').addEventListener('click', nextSlide);
+document.getElementById('prev').addEventListener('click', prevSlide);
+
+// Auto slide a cada 3 segundos
+setInterval(nextSlide, 3000);
+
+    </script>
+
+  <!-- About Section -->
+  <section class="section about">
+    
+    <p>Plastico is committed to sustainability and transforming waste into opportunity. We specialize in turning discarded plastic into high-quality sheets and panels that can be used for furniture, construction materials, and other innovative projects. Our goal is to inspire change and contribute to a circular economy.</p>
+    <div><button id="btn-learn-more"><a href=""></a>Learn more about Plastico <i class="bi bi-arrow-right-short"></i></button></div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services">
+    <h2>Our Services</h2>
+    <div class="service">
+      <h3>Custom Plastic Designs</h3>
+      <p>We create durable and aesthetically pleasing designs using recycled plastic, tailored to meet the unique needs of our clients.</p>
+    </div>
+    <div class="service">
+      <h3>Sustainability Consulting</h3>
+      <p>We help businesses implement sustainable practices by incorporating recycled materials into their operations and designs.</p>
+    </div>
+    <div class="service">
+      <h3>Educational Workshops</h3>
+      <p>Our workshops empower communities to understand the value of recycling and incorporate sustainable practices in daily life.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section gallery">
+    <h2>Gallery</h2>
+    <p>Discover how we transform waste into innovative solutions through our projects.</p>
+    <div class="image">
+      <img src="assets/gallery1.jpg" alt="Project 1" style="width: 100%; border-radius: 8px;">
+    </div>
+    <div class="image">
+      <img src="assets/gallery2.jpg" alt="Project 2" style="width: 100%; border-radius: 8px;">
+    </div>
+    <div class="image">
+      <img src="assets/gallery3.jpg" alt="Project 3" style="width: 100%; border-radius: 8px;">
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <p>"Plastico helped us reduce waste and build a sustainable future."</p>
+      <strong>- Alex J.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Amazing designs and great environmental impact!"</p>
+      <strong>- Maria R.</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Innovative and inspiring work with recycled materials."</p>
+      <strong>- John D.</strong>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to collaborate? Reach out to us!</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <div id="footer">Footer - Add your links and contact info here</div>
+  <script src="js/header-footer.js"></script>
+</body>
+</html>
