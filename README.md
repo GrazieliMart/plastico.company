@@ -1,2 +1,2 @@
-# palstico.company
+# plastico.company
 Site plastico
