@@ -88,3 +88,14 @@ gap: 200px;
 .footer-bottom .text-right {
   text-align: right;
 }
+
+@media (max-width: 900px) {
+.footer-top {
+  display: grid
+;
+  font-size: 13px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}}

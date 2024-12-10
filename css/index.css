@@ -3,6 +3,64 @@ body {
     margin: 0;
     padding: 0;
   }
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #eceeef;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    /* Centralizar conteúdo */
+    .section {
+      padding: 2em;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section p {
+    color: #443c3c;
+    font-family: 'PPNeueMontreal', sans-serif;
+    margin-bottom: 3em;
+    font-size: 20px;
+}
+
+    #relato h2{
+      font-size: 55px;
+      color: #47534c;
+      font-weight: 900;
+      line-height: 60px;
+    }
+    #relato p{
+      color: #717c76;
+      font-size: 15px;
+      line-height:20px;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .contact-form button {
+      background: #4CAF50;
+      color: white;
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background: #45a049;
+    }
   ::-webkit-scrollbar {
     width: 10px;
 
@@ -40,21 +98,7 @@ body {
     object-fit: cover;
   }
   
-  @keyframes slide {
-    0%, 25% {
-      transform: translateX(0%);
-    }
-    25.01%, 50% {
-      transform: translateX(-100%);
-    }
-    50.01%, 75% {
-      transform: translateX(-200%);
-    }
-    75.01%, 100% {
-      transform: translateX(-300%);
-    }
-  }
-  
+
   .hero-text {
     width: 600px;
     position: relative;
@@ -93,3 +137,114 @@ body {
     background-color: #1e4f68;
     transition: 0.2s;
   }
+  .div-intro-index {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center ;
+    width: 100%;
+    overflow: hidden;
+    animation: moveRight 20s linear infinite; /* Animação em loop infinito */
+}
+
+.div-intro-index img,video {
+    width: 100%;
+    height:300px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.87); /* Funda a imagem com fundo escuro */
+    opacity: 0; /* Começa invisível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+  cursor: pointer;
+    opacity: 1; /* Torna o texto visível ao passar o mouse */
+}
+
+
+
+@media (max-width: 600px) {
+  .overlay .text {
+    color: white;
+    font-size: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+  .overlay {
+  
+    height: 70px;
+  
+}
+  .div-intro-index img {
+    width: 100%;
+    height: 70px;
+}
+.div-intro-index video {
+  width: 100%;
+  height: 70px;
+}
+}
+.slides {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+.slides .left {
+  flex: 1;
+  padding: 20px;
+}
+.slides .left h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.slides .left p {
+  font-size: 16px;
+}
+.slides .left button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.slides .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.slides .right img {
+  width: 100%;
+  height: auto;
+  transition: opacity 1s ease-in-out;
+}
