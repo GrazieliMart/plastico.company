@@ -99,14 +99,22 @@
   document.addEventListener("DOMContentLoaded", function () {
     const toggleSwitch = document.querySelector(".switch-container input");
     const logoImg = document.getElementById("logo-img");
+    const mobileLogoImg = document.querySelector(".mobile-logo img");
 
     function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
+      
+      // Muda a imagem da logo principal (desktop)
       logoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
+      
+      // Muda a imagem da logo mobile
+      mobileLogoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
     }
+
     toggleSwitch.addEventListener("change", toggleDarkMode);
   });
 </script>
+
 <!-- NAVBAR MOBILE -->
 <div id="nav-mobile" class="d-lg-none">
   <div class="mobile-header">
@@ -123,6 +131,7 @@
       <li><a href="about.html">About Us</a></li>
       <li><a href="sustainability.html">Sustainability</a></li>
       <li><a href="contact.html">Contact Us</a></li>
+      <li></li>
     </ul>
   </div>
 </div>
@@ -193,26 +202,100 @@
     });
 </script>
 
+<!-- HERO SECTION -->
+<div class="hero" id="hero">
+  <video id="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video (1).webm" type="video/mp4">
+  </video>
 
-  <!--HERO SECTION-->
-  <div class="hero" id="hero" style="background-image: url('back-hero-1.png');">
-    <div class="align-hero">
-      <h1 id="hero-title">Recreating with Recycled Plastic</h1>
-      <p id="hero-subtitle">Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.</p>
-    
+  <div class="align-hero">
+    <h1 id="hero-title">Recreating with Recycled Plastic</h1>
+    <p id="hero-subtitle">
+      Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.
+    </p>
+  </div>
+
+  <div class="floating-div">
+    <div class="text">
+      <span><p>Up Next</p></span>
+      <p id="click-text">Re-think your waste. Incorrect disposal affects the environment and all of us.</p>
+      <strong><i class="bi bi-arrow-right"></i></strong> 
     </div>
-
-    <div class="floating-div">
-      <div class="text">
-        <span><p>Up Next</p></span>
-        <p id="click-text">Re-think you waste. Incorrect disposal affects the environment and all of us.</p>
-        <strong><i class="bi bi-arrow-right"></i></strong> 
-      </div>
-      <div class="image">
-        <img src="hero-1.png" id="floating-img" alt="Thumbnail">
-      </div>
+    <div class="image">
+      <img src="hero-1.png" id="floating-img" alt="Thumbnail">
     </div>
   </div>
+</div>
+
+<style>
+
+</style>
+
+<script>
+  const heroVideo = document.getElementById('hero-video');
+  const heroTitle = document.getElementById('hero-title');
+  const heroSubtitle = document.getElementById('hero-subtitle');
+  const floatingImg = document.getElementById('floating-img');
+  const clickText = document.getElementById('click-text');
+
+  const data = [
+    {
+      video: 'assets/video (2).webm',
+      title: 'Recreating with Recycled Plastic',
+      subtitle: 'Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.',
+      img: 'hero-1.png',
+      clickText: 'Re-think your waste. Incorrect disposal affects the environment and all of us.'
+    },
+    {
+      video: 'assets/video (3).webm',
+      title: 'Only 9% of Plastic Has Been Recycled',
+      subtitle: 'This alarming statistic emphasizes the need for change in how we consume and dispose of plastic, pushing us to find creative solutions for repurposing it.',
+      img: 'images/8.png',
+      clickText: '8 Million Tons of Plastic End Up in the Oceans Every Year.'
+    },
+    {
+      video: 'assets/video (4).webm',
+      title: '8 Million Tons of Plastic End Up in the Oceans Every Year',
+      subtitle: 'By reducing single-use plastics and promoting recycling initiatives, we can help protect marine life and ensure the health of our ecosystems for generations to come.',
+      img: 'images/7.png',
+      clickText: 'At Plastico, we believe that these small habits can transform the planet.'
+    },
+    {
+      video: 'assets/video.webm',
+      title: 'Greener Future',
+      subtitle: 'At Plastico, we believe that these small habits can transform the planet. Let’s work together for a cleaner, greener future.',
+      img: 'images/6.png',
+      clickText: 'Recreating with Recycled Plastic.'
+    }
+  ];
+
+  let currentIndex = 0;
+
+  const updateHeroContent = () => {
+    heroVideo.style.opacity = 0; // Suaviza a transição
+    setTimeout(() => {
+      heroVideo.src = data[currentIndex].video;
+      heroTitle.textContent = data[currentIndex].title;
+      heroSubtitle.textContent = data[currentIndex].subtitle;
+      floatingImg.src = data[currentIndex].img;
+      clickText.textContent = data[currentIndex].clickText;
+      heroVideo.style.opacity = 1; // Traz o vídeo de volta suavemente
+    }, 1000);
+  };
+
+  // Troca de vídeo automática a cada 5 segundos
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % data.length;
+    updateHeroContent();
+  }, 10000);
+
+  // Troca de vídeo ao clicar na imagem
+  floatingImg.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % data.length;
+    updateHeroContent();
+  });
+</script>
+
 
 
       <!-- DIV 2 -->
@@ -355,8 +438,8 @@
   <div class="video-div4">
      
     <div class="video-div4-player">
-      <video width="100%" height="100%" loop autoplay>
-        <source src="assets/video.mp4" type="video/mp4">
+      <video width="100%" height="100%" loop autoplay playsinline>
+        <source src="assets/video.webm" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
@@ -407,7 +490,7 @@
           <div class="div-5-contact-text">
             <h2>Social Info</h2>
             <p>Follow us at Instagram</p>
-            <button class="contact-now-btn">Contact Now →</button>
+            <a href="https://www.instagram.com/plasti.company/"><button class="contact-now-btn">Follow Now →</button></a>
           </div>
         </div>
       </div>
@@ -567,67 +650,7 @@
 <div class="footer-strip">
   <p>© 2025 Plastico Company. All rights reserved. Created by <a href="https://marketinggdigital.com/" style="color: #007BFF; text-decoration: none; font-weight: 900;">GGDIGITAL</a></p>
 </div>  
-  <script>
-    const hero = document.getElementById('hero');
-    const heroTitle = document.getElementById('hero-title');
-    const heroSubtitle = document.getElementById('hero-subtitle');
-    const floatingImg = document.getElementById('floating-img');
-    const clickText = document.getElementById('click-text');
-  
-    const data = [
-      {
-        background: 'back-hero-1.png',
-        title: 'Recreating with Recycled Plastic',
-        subtitle: 'Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.',
-        img: 'hero-1.png',
-        clickText: 'Re-think you waste. Incorrect disposal affects the environment and all of us.' 
-      },
-      {
-        background: 'assets/hero-image.png',
-        title: 'Only 9% of Plastic Has Been Recycled',
-        subtitle: 'This alarming statistic emphasizes the need for change in how we consume and dispose of plastic, pushing us to find creative solutions for repurposing it.',
-        img: 'images/8.png',
-        clickText: '8 Million Tons of Plastic End Up in the Oceans Every Year.'
-      },
-      {
-        background: 'assets/heo-image2.png',
-        title: '8 Million Tons of Plastic End Up in the Oceans Every Year',
-        subtitle: 'By reducing single-use plastics and promoting recycling initiatives, we can help protect marine life and ensure the health of our ecosystems for generations to come.',
-        img: 'images/7.png',
-        clickText: 'At Plastico, we believe that these small habits can transform the planet.'
-      },
-      {
-        background: 'assets/hero-image2.png',
-        title: 'Greener future.',
-        subtitle: 'At Plastico, we believe that these small habits can transform the planet. Let’s work together for a cleaner, greener future.',
-        img: 'images/6.png',
-        clickText: 'Recreating with Recycled Plastic.'
-      }
-    ];
-  
-    let currentIndex = 0;
-  
-    // Função para atualizar os elementos
-    const updateHeroContent = () => {
-      hero.style.backgroundImage = `url(${data[currentIndex].background})`;
-      heroTitle.textContent = data[currentIndex].title;
-      heroSubtitle.textContent = data[currentIndex].subtitle;
-      floatingImg.src = data[currentIndex].img;
-      clickText.textContent = data[currentIndex].clickText;
-    };
-  
-    // Atualiza os elementos automaticamente a cada 3 segundos
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % data.length;
-      updateHeroContent();
-    }, 3000);
-  
-    // Atualiza os elementos ao clicar na imagem
-    floatingImg.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % data.length;
-      updateHeroContent();
-    });
-  </script>
+ 
   <!-- Inclua a biblioteca AOS -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
