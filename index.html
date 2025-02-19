@@ -33,89 +33,126 @@
 <body>
 
 
-  <!--NAVBAR PLASTICO-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img id="logo-img" src="images/logo-black-text.png" alt="Logo" width="50">
-      </a>
-      <script>document.addEventListener("DOMContentLoaded", function () {
-        const toggleSwitch = document.querySelector(".switch-container input"); // Botão de alternância
-        const logoImg = document.getElementById("logo-img"); // Seleciona a logo
+<!-- NAVBAR PLASTICO -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img id="logo-img" src="images/logo-black-text.png" alt="Logo" width="50">
+    </a>
     
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-    
-            // Verifica se o modo escuro está ativado
-            if (document.body.classList.contains("dark-mode")) {
-                logoImg.src = "images/modo-escuro.png"; // Define a imagem escura
-            } else {
-                logoImg.src = "images/logo-black-text.png"; // Define a imagem clara
-            }
-        }
-    
-        // Evento para mudar o modo quando clicar no switch
-        toggleSwitch.addEventListener("change", toggleDarkMode);
-    });
-    </script>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>      
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>      
+      </ul>
 
-        <div class=" ms-auto align-items-center" id="align-right"> 
-          <ul class="navbar-nav ms-auto">  
-     
-      
-        <li class="nav-item"><a class="nav-link" href="contact.html"><button class="contact">Contact Us</button></a></li>
+      <div class="ms-auto align-items-center" id="align-right"> 
+        <ul class="navbar-nav ms-auto">  
+          <li class="nav-item"><a class="nav-link" href="contact.html"><button class="contact">Contact Us</button></a></li>
           <li class="nav-item">
             <a class="nav-link" href="index.html" id="irish-company" data-bs-toggle="tooltip" data-bs-placement="right" title="An Irish Company">
               <img src="assets/bandeira.jpg" alt="Company Logo" width="30" height="30">
-            </a>  <p class="tooltip-text ms-2">An Irish Company</p>
-          </li> </ul>
-        
-        </div>
+            </a>
+            <p class="tooltip-text ms-2">An Irish Company</p>
+          </li>
+        </ul>
       </div>
     </div>
-     <script>
-   document.addEventListener("DOMContentLoaded", function () {
-  let lastScrollTop = 0;
-  const navbar = document.querySelector(".container-fluid");
-  const scrollThreshold = 50;
-
-  window.addEventListener("scroll", function () {
-    // Verifica a largura da tela
-    const screenWidth = window.innerWidth || document.documentElement.clientWidth;
-
-    // Aplica o efeito apenas se a largura da tela for maior que 1200px
-    if (screenWidth > 1200) {
-      let scrollTop = window.scrollY || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
-        // Rola para baixo - esconde a navbar
-        navbar.style.transform = "translateY(-200%)";
-      } else {
-        // Rola para cima - mostra a navbar
-        navbar.style.transform = "translateY(0)";
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a"); // Seleciona todos os links da navbar
+    const currentPath = window.location.pathname.split("/").pop(); // Obtém o nome do arquivo da página atual
+  
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop(); // Obtém o nome do arquivo do link
+  
+      if (linkPath === currentPath) {
+        link.classList.add("active"); // Adiciona classe ativa ao link da página atual
       }
-
-      lastScrollTop = scrollTop;
-    } else {
-      // Se a largura da tela for menor ou igual a 1200px, remove qualquer transformação
-      navbar.style.transform = "translateY(30%)";
-    }
+    });
   });
-});
-
   </script>
-  </nav>
+</nav>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarLinks = document.querySelectorAll(".nav-link");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          let bsCollapse = new bootstrap.Collapse(navbarCollapse);
+          bsCollapse.hide(); // Fecha o menu corretamente
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.querySelector(".switch-container input");
+    const logoImg = document.getElementById("logo-img");
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      logoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
+    }
+    toggleSwitch.addEventListener("change", toggleDarkMode);
+  });
+</script>
+<!-- NAVBAR MOBILE -->
+<div id="nav-mobile" class="d-lg-none">
+  <div class="mobile-header">
+    <a class="mobile-logo" href="index.html">
+      <img src="images/logo-black-text.png" alt="Logo" width="40">
+    </a>
+    <button id="mobile-menu-btn">☰</button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <button id="close-menu-btn">✖</button> <!-- Botão de fechar -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const closeMenuBtn = document.getElementById("close-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    // Abrir menu
+    mobileMenuBtn.addEventListener("click", function () {
+      mobileMenu.classList.add("show");
+    });
+
+    // Fechar menu
+    closeMenuBtn.addEventListener("click", function () {
+      mobileMenu.classList.remove("show");
+    });
+
+    // Fechar ao clicar em um link
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("show");
+      });
+    });
+  });
+</script>
+
 
   
   

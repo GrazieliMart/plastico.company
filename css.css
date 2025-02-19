@@ -1,6 +1,11 @@
-body{
+body {
   font-family: 'Montserrat', sans-serif !important;
-  background-color: #002770 ;
+  background-color: #002770;
+  overflow-x: hidden !important;
+}
+.active {
+  color: rgb(7 166 239) !important;
+  font-weight: bold !important;
 }
 
 .copied-message {
@@ -1003,12 +1008,11 @@ input:checked + .slider:before {
     background-color: #f9f9f9; /* Fundo levemente cinza */
   }
 
-  /* Estilo para os itens do menu de navegação */
   .nav-item a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    color:#007bff;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #002770;
+    transition: background-color 0.3sease, color 0.3sease;
 }
 /* From Uiverse.io by alexmaracinaru */ 
 .cta {
@@ -1077,7 +1081,7 @@ input:checked + .slider:before {
 }
 
   .nav-item a i{
-    color:#002770;
+    color:#007BFF;
   }
   .nav-item a i {
     font-size: 12px;
@@ -1177,6 +1181,83 @@ input:checked + .slider:before {
 }
 
 
+/* Navbar Mobile */
+#nav-mobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.mobile-logo img {
+  height: 40px;
+  width: 70px;
+}
+
+#mobile-menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Menu lateral com animação suave */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -290px; /* Escondido inicialmente */
+  width: 250px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 20px #00000070;
+  transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transição suave */
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: block;
+}
+
+/* Botão de Fechar */
+#close-menu-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Mostrar o menu com efeito */
+.mobile-menu.show {
+  right: 0; /* Agora abre corretamente */
+}
 
   .nav-item a:hover {
     background-color: #ffffff !important;
@@ -1190,7 +1271,7 @@ input:checked + .slider:before {
   } 
   .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
     display: flex
-  ;
+  !important;
     width: 80%;
     background-color: #ffffff;
     flex-wrap: inherit;
@@ -1534,10 +1615,65 @@ body{
 #mobile{
   display: none;
 }
+@media (max-width: 1200px) {
+  .navbar {
+    position: fixed !important;
+    top: 0;
+    display: none !important;
+    left: 0;
+    width: 100%;
+    transform: none !important;
+    transition: none !important;
+    z-index: 1050;
+  }
+  
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+}
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  display: flex;
+}
 @media screen and (max-width: 1200px) {
   .div2-container {
     display: grid ;
 ;
+}
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  display: none;
+}
+.fixed-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  z-index: 1000;
+  display: flex
+;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.card1,.card2 {
+  width: 300px;
+  height: 450px;}
+.nav-item {
+  padding: 10px;
+  position: relative;
+}
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  background-color: #002770;
+  overflow-x: hidden !important;
 }
 .hero {
   height: 750px;
@@ -1706,6 +1842,30 @@ body{
     display: flex
 ;
     z-index: 9999;
+}
+.tooltip-text {
+  display: flex
+;
+  position: absolute;
+  line-height: 9px;
+  top: 29%;
+  left: 4%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: rgb(24 71 141);
+  background-color: #ffffff00;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  scale: (1);
+  z-index: 1000;
+  opacity: 1;
+  animation: pop 0.3sease forwards;
+  transform: scale(0.8);
+  transition: opacity 0.2sease, transform 0.2sease;
+}
+#align-right {
+  width: 100%;
 }
 .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
   display: flex
