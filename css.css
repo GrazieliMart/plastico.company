@@ -2416,6 +2416,7 @@ body.dark-mode {
   align-items: center;
   gap: 20px;
   padding-left: 30px;
+  padding-right: 30px;
   padding-top: 20px;
   padding-bottom: 20px;
   justify-content: flex-start;
@@ -2477,6 +2478,18 @@ body.dark-mode {
   display: flex
 ;
   z-index: 9999;
+}
+.div2-left {
+  flex: 1;
+  padding: 40px;
+  width: 100%;
+}
+.quem-somos-esquerda h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.div-5-contact-text p{
+  font-size: 12px;
 }
 .div3-box {
   background-image: url(https://via.placeholder.com/300x200);
