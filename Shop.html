@@ -29,14 +29,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-        .sustainability {
-            display: flex;
-            padding: 100px 200px;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-        }
+        body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: #f3f3f3;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.sustainability {
+    display: flex;
+    margin-top: 100px;
+    padding: 100px 200px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+   
+}
+
         .sustainability-content {
             margin-bottom: 40px;
         }
@@ -62,7 +77,34 @@
        
         font-size: 13px;
     }
-        
+    .sustainability-content-img{
+        display: flex;
+        justify-content: center;
+    }
+    .sustainability-content-img i {
+    font-size: 95px;
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-30px); } /* Aumenta a altura do pulo */
+    50% { transform: translateY(0); }
+    70% { transform: translateY(-15px); } /* Aumenta a altura do pulo também aqui */
+    100% { transform: translateY(0); }
+}
+
+.sustainability-content-img i.jumping {
+    animation: jump 0.5s ease-in-out;
+}
+.sustainability-content-img hr{
+    height: 3px;
+}
+.div3-container {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra apenas na parte inferior */
+    padding: 100px 250px;
+    background-color: #ffffff;
+}
         .sustainability-feature img {
             width: 300px;
             margin-bottom: 20px;
@@ -360,36 +402,32 @@
 
 
 <div class="sustainability">
-    <div class="sustainability-content">  
-          <img src="images/logo-unic.png" alt="">
+    <div class="sustainability-content"> 
+        <div class="sustainability-content-img">
+            <i class="bi bi-cart"></i>
+        </div> 
         <h2>Your shopping cart is empty.</h2>
-      <br><br>
-    </div>
-    <div class="sustainability-features">
-        <div class="sustainability-feature">
-            <h3>Customized Solutions</h3>
-            <p>Tailored solutions to fit your unique <br>needs and sustainability <br> goals.</p>
-            <img src="images/sus (1).png" alt="Customized Solutions">
+        <hr>
+        <p>We are currently in the <b>production phase</b>, working hard to bring you a wide range of high-quality products. 
+            <br><br>Stay tuned for exciting updates as we prepare to launch and provide you with the best <b>shopping experience!</b></p>
             <br>
-            <p>Collaborate with us to create products that align with your vision and values.</p>
-        </div>
-        <div class="sustainability-feature">
-            <h3>Advanced Material Research</h3>
-            <p>We invest in research to develop materials that are both innovative and <br>sustainable.</p>
-            <img src="images/sus (2).png" alt="Advanced Material Research">
-            <br>
-            <p>Our team is dedicated to pioneering materials that redefine industry standards.</p>
-        </div>
-        <div class="sustainability-feature">
-            <h3>Eco-conscious Packaging</h3>
-            <p>Our packaging solutions reduce environmental impact while maintaining quality.</p>
-            <img src="images/sus (3).png" alt="Eco-conscious Packaging">
-            <br>
-            <p>Utilizing renewable materials, our packaging solutions are designed to minimize waste.</p>
-        </div>
+            <i class="bi bi-arrow-down-short" style="font-size: 28px;"></i>
+        <br><br>
     </div>
 </div>
+<script>window.addEventListener('load', function() {
+    const icon = document.querySelector('.sustainability-content-img i');
 
+    // Adiciona a animação de pular
+    icon.classList.add('jumping');
+
+    // Após a animação, muda o ícone
+    setTimeout(function() {
+        icon.classList.remove('jumping');
+        icon.classList.replace('bi-cart', 'bi-cart-x');
+    }, 500); // 500ms = duração da animação
+});
+</script>
   
 
   <!--FIXED DIV RIGHT BOTTOM-->
@@ -443,217 +481,48 @@
     });
 </script>
 
-<div class="div2-container d-flex" data-aos="fade-up">
 
-  <div class="div2-left">
-      <h2>Sustainability through Plastic Recycling in Ireland</h2>
-      <br>
-      <p>As a company committed to sustainability, we focus on the crucial task of recycling plastic waste in Ireland. With the increasing challenge of plastic pollution, we strive to turn discarded plastic into high-quality raw materials that can be reused. <br><br>Our goal is to reduce the environmental impact of plastic, conserve valuable resources, and contribute to a circular economy. <br><br>By giving plastic a second life, we take a significant step toward a cleaner, greener future for Ireland and the world.
-      </p>
-    </div>
-    
-
-</div>
- 
     
 
   <!--DIV3-->
   <div class="div3-container">
     <div class="div3-inner">
-      <h2>Explore Our Eco-Friendly Plastic</h2>
-      <p>Discover our range of sustainable plastic alternatives designed to meet your needs.</p>
+      <h2>Our sample store will be open soon.</h2>
+      <p>With all examples and kits for designers available and ready for delivery.</p>
     </div>
     <div class="div3-bottom">
-      <div class="div3-box" style="background-image: url('images/box-3\ \(1\).png');">
-        <h3><strong>Recycled Plastic Panels</strong></h3>
-        <p>Durable panels for construction</p>
+      <div class="div3-box" style="background-image: url('samples\ \(1\).png');">
+        <h3><strong>WorksSpace</strong></h3>
+       
       </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(2\).png');">
-        <h3><strong>Eco-friendly Furniture</strong></h3>
-        <p>Stylish, eco-friendly furniture</p>
+      <div class="div3-box" style="background-image: url('samples\ \(2\).png');">
+        <h3><strong>Colorfull</strong></h3>
+      
       </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(3\).png');">
-        <h3><strong>Plastic as Sustainable Flooring</strong></h3>
-        <p>Strong, sustainable flooring</p>
+      <div class="div3-box" style="background-image: url('samples\ \(4\).png');">
+        <h3><strong>Orange Venus</strong></h3>
+       
       </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(6\).png');">
-        <h3><strong>Environmentally Conscious Design</strong></h3>
-        <p>Eco Design</p>
+      <div class="div3-box" style="background-image: url('samples\ \(5\).png');">
+        <h3><strong>Ocean Blue</strong></h3>
+       
       </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(5\).png');">
-        <h3><strong>Green Innovation</strong></h3>
-        <p>Innovative Solutions</p>
+      <div class="div3-box" style="background-image: url('samples\ \(6\).png');">
+        <h3><strong>Pink Lemonade</strong></h3>
+       
       </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(4\).png');">
-        <h3><strong>New Colored Plastics</strong></h3>
-        <p>Innovative and sustainable solutions for a brighter future.</p>
+      <div class="div3-box" style="background-image: url('samples\ \(7\).png');">
+        <h3><strong>Olive Green</strong></h3>
+        
       </div>
     </div>
   </div>
-  <div class="container my-5">
-    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-    <div class="row">
-        <!-- Left Column -->
-        <div class="col-md-6">
-            <div class="accordion" id="faqLeft">
-                <!-- FAQ 1 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                            What is Plastico Company?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqLeft">
-                        <div class="accordion-body">
-                            Plastico Company is a company focused on sustainability and the creation of innovative design solutions for businesses, including retail shops and brand activation projects.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 2 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                            What services does Plastico Company offer?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
-                        <div class="accordion-body">
-                            We offer a variety of services including sustainable product design, retail store design, brand activation solutions, and consulting for eco-friendly business practices.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 3 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                            What industries does Plastico Company work with?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
-                        <div class="accordion-body">
-                            We collaborate with various industries, including retail, hospitality, corporate branding, and sustainable product manufacturing.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 4 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                            How does Plastico Company incorporate sustainability into its projects?
-                        </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
-                        <div class="accordion-body">
-                            We use recycled materials, eco-friendly production methods, and sustainable design principles to ensure minimal environmental impact.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Right Column -->
-        <div class="col-md-6">
-            <div class="accordion" id="faqRight">
-                <!-- FAQ 5 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFive">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                            How can I contact Plastico Company?
-                        </button>
-                    </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                        <div class="accordion-body">
-                            You can reach us via phone at +353 83 848 1886, or through our email at [Your Contact Email Here]. We are happy to assist with any inquiries you may have.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 6 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingSix">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-                            Does Plastico Company work with international clients?
-                        </button>
-                    </h2>
-                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                        <div class="accordion-body">
-                            Yes, we work with clients worldwide, providing remote consultations and project development tailored to different markets.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 7 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingSeven">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
-                            Can I request a custom project with Plastico Company?
-                        </button>
-                    </h2>
-                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                        <div class="accordion-body">
-                            Absolutely! We specialize in tailor-made solutions to meet your specific branding and sustainability needs.
-                        </div>
-                    </div>
-                </div>
-                <!-- FAQ 8 -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingEight">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
-                            What makes Plastico Company different from other design firms?
-                        </button>
-                    </h2>
-                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqRight">
-                        <div class="accordion-body">
-                            Our commitment to sustainability, innovation, and custom design solutions sets us apart. We focus on eco-friendly materials and creative strategies to elevate your brand.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!--DIV 5-->
-  <div class="div3-container">
-    <div class="div-5">
-      <div class="div-5-content">
-        <img src="images/favicon.png" alt="" id="img-div5">
-        <h2>Connect with Us</h2>
-        <p>Reach out to Plastico Company for inquiries about our sustainable solutions.
-
-        </p>
-      </div>
-      <div class="div-5-contact-options">
-        <div class="div-5-contact">
-          <img src="assets/contact-icons (1).png" alt="Contact 1">
-          <div class="div-5-contact-text">
-            <h2>General Inquiries
-            </h2>
-            <p>Contact us for more information about our products and services.</p>
-            <a href="contact.html"><button class="contact-now-btn">Contact Now →</button></a>
-          </div>
-        </div>
-        <div class="div-5-contact">
-          <img src="assets/contact-icons (2).png" alt="Contact 2">
-          <div class="div-5-contact-text">
-            <h2>Partnership            </h2>
-            <p>Explore our biggest partner.</p>
-           <a href="https://forja.works/"><button class="contact-now-btn">Take a Look →</button></a> 
-          </div>
-        </div>
-        <div class="div-5-contact">
-          <img src="assets/contact-icons (3).png" alt="Contact 3">
-          <div class="div-5-contact-text">
-            <h2>Social Info</h2>
-            <p>Follow us at Instagram</p>
-            <a href="https://www.instagram.com/plasti.company/"><button class="contact-now-btn">Follow Now →</button></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
+ 
 
 
   <!--DIV CARD1-->

@@ -119,7 +119,14 @@ body {
    background-color: #04080f ; /* Cor de fundo do site */
    color: #ccc; /* Cor do texto padrão */
  }
-
+ .sustainability-content-img i {
+  font-size: 95px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+.sustainability i{
+  color: #fff;
+}
  .quem-somos, .quem-somos-2, .quem-somos-3{
   color: #fff;
  
