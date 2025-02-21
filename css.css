@@ -1302,7 +1302,7 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: none;
+  border: none;width: 150px;
   text-transform: uppercase;
   background-color: #002770;
   border-radius: 50px;
@@ -1314,6 +1314,14 @@ input:checked + .slider:before {
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
+#irish-company {
+  display: inline-block;
+}
+
+#irish-company:hover + .tooltip-text {
+  color: #008bf8;
+}
+
 
 .contact:hover {
   animation: sh0 0.5s ease-in-out both;
@@ -1532,7 +1540,7 @@ input:checked + .slider:before {
 #irish-company img {
   border-radius: 2px;
   transition: transform 0.3s ease;
-  height: 15px;
+  height: 25px;
 }
 
 #irish-company img:hover {
@@ -1544,28 +1552,44 @@ input:checked + .slider:before {
   position: relative;
 }
 #align-right{
+  margin-right: 50px;
   width: 500px;
+}
+#align-contact{
+  gap: 5px;
+  margin-right: 50px;
+}
+#bandeira {
+  justify-content: center;
+  display: flex
+;
+  align-items: center;
+}
+#shop{
+  background-color: #ffffff00;
+  color: #FFF;
 }
 
 .tooltip-text {
-  display: flex;
-  position: absolute;
-  line-height: 9px;
-  top: 50%;
-  left: -18%;
+  display: flex
+;
+  position: relative;
+  line-height: 13px;
+  top: 12%;
+  left: -9%;
   transform: translateX(-50%);
   font-weight: 700;
   color: rgb(24 71 141);
   background-color: #ffffff00;
   padding: 5px 10px;
   border-radius: 4px;
-  font-size: 11px;
+  font-size: 15px;
   scale: (1);
   z-index: 1000;
-  opacity: 1; /* Torna visível */
-  animation: pop 0.3s ease forwards; /* Aplica a animação */
+  opacity: 1;
+  animation: pop 0.3sease forwards;
   transform: scale(0.8);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2sease, transform 0.2sease;
 }
 .nav-item {
   position: relative;
