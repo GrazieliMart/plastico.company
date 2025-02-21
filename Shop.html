@@ -1,39 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Shopping Cart - Coming Soon</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            color: #fff;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(0, 0, 0);
-            font-family: Arial, sans-serif;
         }
         .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .cart-header h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        .cart-message {
+            font-size: 20px;
+            color: #555;
             text-align: center;
         }
-        .coming-soon {
-            font-size: 32px;
-            font-weight: bold;
+        .cart-message p {
+            margin: 20px 0;
         }
-        img {
-            width: 600px;
+        .cart-empty {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .cart-empty img {
+            width: 150px;
             height: auto;
+            margin-right: 20px;
+        }
+        .btn-return {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
             margin-top: 20px;
+        }
+        .btn-return:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-      
-        <img src="images/logo-black-text.png" alt="Imagem" />
+        <div class="cart-header">
+            <h1>Shopping Cart</h1>
+        </div>
+        <div class="cart-message">
+            <p>Currently, there are no products in your cart.</p>
+            <p>Unfortunately, our store is not yet open for sales, but soon we will have the best plastic sheet options for you!</p>
+        </div>
+        <div class="cart-empty">
+            <img src="https://via.placeholder.com/150" alt="Empty Cart Image">
+            <p>Your cart is empty.</p>
+        </div>
+        <div class="cart-message">
+            <p>Stay tuned for updates and don't miss out on the latest news!</p>
+        </div>
+        <div style="text-align: center;">
+            <a href="/" class="btn-return">Back to Homepage</a>
+        </div>
     </div>
 </body>
 </html>
