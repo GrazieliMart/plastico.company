@@ -119,6 +119,23 @@ body {
    background-color: #04080f ; /* Cor de fundo do site */
    color: #ccc; /* Cor do texto padrão */
  }
+
+ .quem-somos, .quem-somos-2, .quem-somos-3{
+  color: #fff;
+ 
+ }
+ .quem-somos h2{
+  color: #455c74;
+ 
+ }
+ .quem-somos-2 h3{
+  color: #455c74;
+ 
+ }
+ .quem-somos-3 h2{
+  color: #455c74;
+ 
+ }
  .about-div-left {
   width: 60%;
   color: #e6e8e9;
@@ -1731,6 +1748,17 @@ body.dark-mode { background-color: #04080f;
     font-size: 18px;
     color: #ffffff;
 }
+.exemplos {
+  display: flex
+;
+  align-items: center;
+  padding: 100px 200px;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: -150px;
+  color: #9d9d9d;
+  background: #091225;
+}
 .innovation-heading {
     font-size: 28px;
     font-weight: 900;
@@ -1943,10 +1971,217 @@ body{
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
   display: flex;
 }
+.quem-somos {
+  display: flex
+;
+gap: 200px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 200px;
+}
+  .quem-somos-esquerda {
+      width: 40%;
+  }
+  .quem-somos-esquerda h2{
+      font-size: 75px;
+      font-weight: 900;
+      margin-top: 100px;
+  }
+  .quem-somos-esquerda h2, 
+  .quem-somos-esquerda p, 
+  .quem-somos-esquerda button {
+      margin-bottom: 20px;
+  }
+  .quem-somos-direita {
+      width: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+  }
+  .quem-somos-mosaico {
+  display: grid
+;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
+  transition: transform 0.5sease-out;
+}
+  .quem-somos-mosaico img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+  .quem-somos-2 {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px;
+      text-align: center;
+  }
+  .quem-somos-2-bloco {
+      width: 20%;
+  }
+  .quem-somos-2-bloco p {
+     font-size: 12px;
+  }
+  .quem-somos-2-bloco h3 {
+    font-weight: 900;
+    font-size: 16px;
+  }
+  .quem-somos-2-bloco img {
+      width: 90px;
+      height: auto;
+  }
+  .quem-somos-3 {
+  text-align: left;
+  padding: 100px 170px;
+}
+.quem-somos-3 h2{
+  font-weight: 900;
+}
+  .quem-somos-3-link {
+      color: #5ce1e6;
+      text-decoration: none;
+  }
+  .quem-somos-3-link:hover {
+      text-decoration: underline;
+  }
+  #mosaico-img{
+      margin-top: -150px;
+  }
+
+  .exemplos {
+    display: flex;
+    align-items: center;
+    padding: 100px 200px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: -150px;
+    color: #cdcccc;
+    background: #002770;
+}
+.fade-out {
+  opacity: 0;
+  transform: translateX(100%); /* Movimento para a direita */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transição mais rápida */
+}
+.exemplos h2 {
+  font-weight: 900;
+  font-size: 85px;
+  color: #fff;
+  transition: opacity 2s ease;
+}
+.exemplos p {
+  font-size: 17px;
+  transition: opacity 2s ease;
+}
+
+.align-seta {
+    gap: 50px;
+    transition: opacity 2s ease;
+    display: flex;
+}
+
+.exemplos-esquerda img {
+    width: 500px;
+    border-radius: 6px;
+    height: 500px;
+    object-fit: cover;
+    transition: opacity 2s ease;
+}
+
+.exemplos-direita {
+  width: 700px;
+  display: flex
+;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.seta {
+  transition: opacity 2s ease;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 10px;
+    user-select: none;
+}
+.seta:hover{
+  transition: opacity 2s ease;
+  color: #007BFF;
+  cursor: pointer;
+  transition: 0.2s;
+  transform: scale(1.1);
+}
 @media screen and (max-width: 1200px) {
+  .exemplos {
+    display: grid
+;
+    align-items: center;
+    padding: 40px;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    color: #cdcccc;
+    background: #002770;
+}
+.exemplos-esquerda img {
+  width: 100%;
+  border-radius: 6px;
+  height: 300px;
+  object-fit: cover;
+  transition: opacity 2sease;
+}
+.exemplos-direita {
+  width: 700px;
+  display: contents;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+.exemplos h2 {
+  font-weight: 900;
+  font-size: 35px;
+  color: #fff;
+  transition: opacity 2sease;
+}
   .div2-container {
     display: grid ;
 ;
+}
+.quem-somos {
+  display: grid
+;
+  gap: 200px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+}
+.quem-somos-esquerda {
+  width: 100%;
+}
+.quem-somos-direita {
+  width: 100%;
+  margin-top: -200px;
+  display: none;
+  flex-wrap: wrap;
+  position: relative;
+}
+.quem-somos-2 {
+  display: grid
+;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+.quem-somos-2-bloco {
+  width: 100%;
+}
+.quem-somos-3 {
+  text-align: left;
+  margin-bottom: 100px;
+  padding: 40px 40px;
 }
 .bg-light {
   --bs-bg-opacity: 1;

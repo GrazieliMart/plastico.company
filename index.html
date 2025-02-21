@@ -47,6 +47,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+        <li class="nav-item"><a class="nav-link" href="samples.html">Samples</a></li>  
+        <li class="nav-item"><a class="nav-link" href="materials.html">Materials</a></li> 
+        <li class="nav-item"><a class="nav-link" href="Shop.html">Shop</a></li>   
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>      
       </ul>
@@ -94,7 +98,6 @@
     });
   });
 </script>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggleSwitch = document.querySelector(".switch-container input");
@@ -114,7 +117,6 @@
     toggleSwitch.addEventListener("change", toggleDarkMode);
   });
 </script>
-
 <!-- NAVBAR MOBILE -->
 <div id="nav-mobile" class="d-lg-none">
   <div class="mobile-header">
@@ -131,10 +133,15 @@
       <li><a href="about.html">About Us</a></li>
       <li><a href="sustainability.html">Sustainability</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li></li>
+      <li><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+      <li><a class="nav-link" href="samples.html">Samples</a></li>  
+      <li><a class="nav-link" href="materials.html">Materials</a></li> 
+      <li><a class="nav-link" href="Shop.html">Shop</a></li>   
+      
     </ul>
   </div>
 </div>
+
 
 
 <!-- SCRIPT -->
@@ -201,29 +208,14 @@
         });
     });
 </script>
-
-<!-- HERO SECTION -->
-<div class="hero" id="hero">
-  <video id="hero-video" autoplay muted loop playsinline>
-    <source src="assets/video (1).webm" type="video/mp4">
-  </video>
-
-  <div class="align-hero">
-    <h1 id="hero-title">Recreating with Recycled Plastic</h1>
-    <p id="hero-subtitle">
-      Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.
-    </p>
-  </div>
-
-  <div class="floating-div">
-    <div class="text">
-      <span><p>Up Next</p></span>
-      <p id="click-text">Re-think your waste. Incorrect disposal affects the environment and all of us.</p>
-      <strong><i class="bi bi-arrow-right"></i></strong> 
-    </div>
-    <div class="image">
-      <img src="hero-1.png" id="floating-img" alt="Thumbnail">
-    </div>
+ <!--DIV4-->
+ <div class="video-div4" style="margin-top: -50px;">
+     
+  <div class="video-div4-player">
+    <video width="100%" height="100%" loop autoplay playsinline>
+      <source src="assets/video.webm" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 </div>
 
@@ -231,70 +223,7 @@
 
 </style>
 
-<script>
-  const heroVideo = document.getElementById('hero-video');
-  const heroTitle = document.getElementById('hero-title');
-  const heroSubtitle = document.getElementById('hero-subtitle');
-  const floatingImg = document.getElementById('floating-img');
-  const clickText = document.getElementById('click-text');
 
-  const data = [
-    {
-      video: 'assets/video (2).webm',
-      title: 'Recreating with Recycled Plastic',
-      subtitle: 'Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.',
-      img: 'hero-1.png',
-      clickText: 'Re-think your waste. Incorrect disposal affects the environment and all of us.'
-    },
-    {
-      video: 'assets/video (3).webm',
-      title: 'Only 9% of Plastic Has Been Recycled',
-      subtitle: 'This alarming statistic emphasizes the need for change in how we consume and dispose of plastic, pushing us to find creative solutions for repurposing it.',
-      img: 'images/8.png',
-      clickText: '8 Million Tons of Plastic End Up in the Oceans Every Year.'
-    },
-    {
-      video: 'assets/video (4).webm',
-      title: '8 Million Tons of Plastic End Up in the Oceans Every Year',
-      subtitle: 'By reducing single-use plastics and promoting recycling initiatives, we can help protect marine life and ensure the health of our ecosystems for generations to come.',
-      img: 'images/7.png',
-      clickText: 'At Plastico, we believe that these small habits can transform the planet.'
-    },
-    {
-      video: 'assets/video.webm',
-      title: 'Greener Future',
-      subtitle: 'At Plastico, we believe that these small habits can transform the planet. Let’s work together for a cleaner, greener future.',
-      img: 'images/6.png',
-      clickText: 'Recreating with Recycled Plastic.'
-    }
-  ];
-
-  let currentIndex = 0;
-
-  const updateHeroContent = () => {
-    heroVideo.style.opacity = 0; // Suaviza a transição
-    setTimeout(() => {
-      heroVideo.src = data[currentIndex].video;
-      heroTitle.textContent = data[currentIndex].title;
-      heroSubtitle.textContent = data[currentIndex].subtitle;
-      floatingImg.src = data[currentIndex].img;
-      clickText.textContent = data[currentIndex].clickText;
-      heroVideo.style.opacity = 1; // Traz o vídeo de volta suavemente
-    }, 100);
-  };
-
-  // Troca de vídeo automática a cada 5 segundos
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % data.length;
-    updateHeroContent();
-  }, 10000);
-
-  // Troca de vídeo ao clicar na imagem
-  floatingImg.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % data.length;
-    updateHeroContent();
-  });
-</script>
 
 
 
@@ -305,7 +234,7 @@
       <h2>Our Vision for a Sustainable Future</h2>
       <p>At Plastico Company, we are dedicated to advancing innovative plastic solutions that align with our mission for environmental sustainability.</p>
     
-      <button class="button-1">
+      <a href="sustainability.html"><button class="button-1">
         <div class="button-1-box">
           <span class="button-1-elem">
             <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
@@ -322,7 +251,7 @@
             </svg>
           </span>
         </div>
-      </button>
+      </button></a>
     </div>
     <div class="div2-right">
       <div class="div2-box">
@@ -347,6 +276,26 @@
       </div>
     </div>
   </div>
+
+<!--QUEM SOMOS-->
+<div class="quem-somos">
+  <div class="quem-somos-esquerda">
+      <h2>Who we are?</h2>
+      <p>The main objective of Plastico Company is to contribute with its activity to the promotion of a Circular Economy based on the creation of plastic sheets with plastic that would go to trash. <br><br>For each of our products, we issue a company certificate that verifies the type of origin of the raw materials with which each product has been made. If our clients have any plastic waste, we help them to re-value it and use it as raw material for their products, achieving a circular economy.</p>
+      <a href="contact.html"><button class="contact">Contact Us</button></a>
+  </div>
+  <div class="quem-somos-direita">
+      <div class="quem-somos-mosaico">
+          <img src="assets/plastico1 (2).jpg" alt="Imagem 1">
+          <img src="images/black-plastico.png" alt="Imagem 2">
+          <img src="images/plastico (4).jpg" alt="Imagem 3">
+          <img src="assets/plastico1 (1).jpg" alt="Imagem 4" id="mosaico-img">
+          <img src="images/plastico (5).jpg" alt="Imagem 5">
+         
+       
+      </div>
+  </div>
+</div>
 
   <!--DIV3-->
   <div class="div3-container">
@@ -434,22 +383,13 @@
     });
 </script>
 
-  <!--DIV4-->
-  <div class="video-div4">
-     
-    <div class="video-div4-player">
-      <video width="100%" height="100%" loop autoplay playsinline>
-        <source src="assets/video.webm" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
+ 
 
-  <div class="div2-container d-flex" data-aos="fade-up">
+  <div class="div2-container d-flex" >
 
-    <div class="div2-left">
+    <div class="div2-left" data-aos="fade-up">
       <h2>About Plastico</h2>
-      <p>We are a company dedicated to recycling plastic materials and turning them into new, high-quality raw materials. <br><br>By giving discarded plastic a second life, we help reduce environmental impact while promoting sustainability. <br><br>Our mission is simple: to transform waste into solutions. Every piece of recycled plastic is a step closer to a cleaner planet and a more circular economy.
+      <p>We are a company dedicated to create plastic sheets.<br><br>By giving discarded plastic a second life, we help reduce environmental impact while promoting sustainability. <br><br>Our mission is simple: to transform waste into solutions. Every piece of recycled plastic is a step closer to a cleaner planet and a more circular economy.
       </p>
     
     

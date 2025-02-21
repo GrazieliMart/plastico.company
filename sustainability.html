@@ -143,21 +143,21 @@
         font-size: 25px;
     }
     .accordion-button {
-    position: relative;
-    display: flex
+        position: relative;
+        display: flex
 ;
-    align-items: center;
-    width: 100%;
-    padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-    font-size: 1rem;
-    color: #2b2e31;
-    text-align: left;
-    background-color: #000000;
-    border: 0;
-    border-radius: 0;
-    overflow-anchor: none;
-    transition: var(--bs-accordion-transition);
-}
+        align-items: center;
+        width: 100%;
+        padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+        font-size: 1rem;
+        color: #ffffff;
+        text-align: left;
+        background-color: #000000;
+        border: 0;
+        border-radius: 0;
+        overflow-anchor: none;
+        transition: var(--bs-accordion-transition);
+    }
     .sustainability-content p {
         font-size: 13px;
         color: #fff;
@@ -189,8 +189,6 @@
 </head>
   
 <body>
-
-
 <!-- NAVBAR PLASTICO -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -205,6 +203,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+        <li class="nav-item"><a class="nav-link" href="samples.html">Samples</a></li>  
+        <li class="nav-item"><a class="nav-link" href="materials.html">Materials</a></li> 
+        <li class="nav-item"><a class="nav-link" href="Shop.html">Shop</a></li>   
         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>      
       </ul>
@@ -252,7 +254,6 @@
     });
   });
 </script>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const toggleSwitch = document.querySelector(".switch-container input");
@@ -272,7 +273,6 @@
     toggleSwitch.addEventListener("change", toggleDarkMode);
   });
 </script>
-
 <!-- NAVBAR MOBILE -->
 <div id="nav-mobile" class="d-lg-none">
   <div class="mobile-header">
@@ -289,7 +289,11 @@
       <li><a href="about.html">About Us</a></li>
       <li><a href="sustainability.html">Sustainability</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li></li>
+      <li><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+      <li><a class="nav-link" href="samples.html">Samples</a></li>  
+      <li><a class="nav-link" href="materials.html">Materials</a></li> 
+      <li><a class="nav-link" href="Shop.html">Shop</a></li>   
+      
     </ul>
   </div>
 </div>
@@ -396,39 +400,6 @@
     </div>
 </div>
 
-  <!--DIV3-->
-  <div class="div3-container">
-    <div class="div3-inner">
-      <h2>Explore Our Eco-Friendly Plastic</h2>
-      <p>Discover our range of sustainable plastic alternatives designed to meet your needs.</p>
-    </div>
-    <div class="div3-bottom">
-      <div class="div3-box" style="background-image: url('images/box-3\ \(1\).png');">
-        <h3><strong>Recycled Plastic Panels</strong></h3>
-        <p>Durable panels for construction</p>
-      </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(2\).png');">
-        <h3><strong>Eco-friendly Furniture</strong></h3>
-        <p>Stylish, eco-friendly furniture</p>
-      </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(3\).png');">
-        <h3><strong>Plastic as Sustainable Flooring</strong></h3>
-        <p>Strong, sustainable flooring</p>
-      </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(6\).png');">
-        <h3><strong>Environmentally Conscious Design</strong></h3>
-        <p>Eco Design</p>
-      </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(5\).png');">
-        <h3><strong>Green Innovation</strong></h3>
-        <p>Innovative Solutions</p>
-      </div>
-      <div class="div3-box" style="background-image: url('images/box-3\ \(4\).png');">
-        <h3><strong>New Colored Plastics</strong></h3>
-        <p>Innovative and sustainable solutions for a brighter future.</p>
-      </div>
-    </div>
-  </div>
   
 
   <!--FIXED DIV RIGHT BOTTOM-->
@@ -482,18 +453,139 @@
     });
 </script>
 
+<div class="div2-container d-flex" data-aos="fade-up">
+
+  <div class="div2-left">
+      <h2>Sustainability through Plastic Recycling in Ireland</h2>
+      <br>
+      <p>As a company committed to sustainability, we focus on the crucial task of recycling plastic waste in Ireland. With the increasing challenge of plastic pollution, we strive to turn discarded plastic into high-quality raw materials that can be reused. <br><br>Our goal is to reduce the environmental impact of plastic, conserve valuable resources, and contribute to a circular economy. <br><br>By giving plastic a second life, we take a significant step toward a cleaner, greener future for Ireland and the world.
+      </p>
+    </div>
+    
+
+</div>
  
+<!--  HERO SECTION -->
+<div class="hero" id="hero">
+  <video id="hero-video" autoplay muted loop playsinline>
+    <source src="assets/video (1).webm" type="video/mp4">
+  </video>
 
-  <div class="div2-container d-flex" data-aos="fade-up">
+  <div class="align-hero">
+    <h1 id="hero-title">Recreating with Recycled Plastic</h1>
+    <p id="hero-subtitle">
+      Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.
+    </p>
+  </div>
 
-    <div class="div2-left">
-        <h2>Sustainability through Plastic Recycling in Ireland</h2>
-        <br>
-        <p>As a company committed to sustainability, we focus on the crucial task of recycling plastic waste in Ireland. With the increasing challenge of plastic pollution, we strive to turn discarded plastic into high-quality raw materials that can be reused. <br><br>Our goal is to reduce the environmental impact of plastic, conserve valuable resources, and contribute to a circular economy. <br><br>By giving plastic a second life, we take a significant step toward a cleaner, greener future for Ireland and the world.
-        </p>
+  <div class="floating-div">
+    <div class="text">
+      <span><p>Up Next</p></span>
+      <p id="click-text">Re-think your waste. Incorrect disposal affects the environment and all of us.</p>
+      <strong><i class="bi bi-arrow-right"></i></strong> 
+    </div>
+    <div class="image">
+      <img src="hero-1.png" id="floating-img" alt="Thumbnail">
+    </div>
+  </div>
+</div><script>
+  const heroVideo = document.getElementById('hero-video');
+  const heroTitle = document.getElementById('hero-title');
+  const heroSubtitle = document.getElementById('hero-subtitle');
+  const floatingImg = document.getElementById('floating-img');
+  const clickText = document.getElementById('click-text');
+
+  const data = [
+    {
+      video: 'assets/video (2).webm',
+      title: 'Recreating with Recycled Plastic',
+      subtitle: 'Through Plastico, you can access recycled materials to build your entire project looking forward to a greener future.',
+      img: 'hero-1.png',
+      clickText: 'Re-think your waste. Incorrect disposal affects the environment and all of us.'
+    },
+    {
+      video: 'assets/video (3).webm',
+      title: 'Only 9% of Plastic Has Been Recycled',
+      subtitle: 'This alarming statistic emphasizes the need for change in how we consume and dispose of plastic, pushing us to find creative solutions for repurposing it.',
+      img: 'images/8.png',
+      clickText: '8 Million Tons of Plastic End Up in the Oceans Every Year.'
+    },
+    {
+      video: 'assets/video (4).webm',
+      title: '8 Million Tons of Plastic End Up in the Oceans Every Year',
+      subtitle: 'By reducing single-use plastics and promoting recycling initiatives, we can help protect marine life and ensure the health of our ecosystems for generations to come.',
+      img: 'images/7.png',
+      clickText: 'At Plastico, we believe that these small habits can transform the planet.'
+    },
+    {
+      video: 'assets/video.webm',
+      title: 'Greener Future',
+      subtitle: 'At Plastico, we believe that these small habits can transform the planet. Let’s work together for a cleaner, greener future.',
+      img: 'images/6.png',
+      clickText: 'Recreating with Recycled Plastic.'
+    }
+  ];
+
+  let currentIndex = 0;
+
+  const updateHeroContent = () => {
+    heroVideo.style.opacity = 0; // Suaviza a transição
+    setTimeout(() => {
+      heroVideo.src = data[currentIndex].video;
+      heroTitle.textContent = data[currentIndex].title;
+      heroSubtitle.textContent = data[currentIndex].subtitle;
+      floatingImg.src = data[currentIndex].img;
+      clickText.textContent = data[currentIndex].clickText;
+      heroVideo.style.opacity = 1; // Traz o vídeo de volta suavemente
+    }, 100);
+  };
+
+  // Troca de vídeo automática a cada 5 segundos
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % data.length;
+    updateHeroContent();
+  }, 10000);
+
+  // Troca de vídeo ao clicar na imagem
+  floatingImg.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % data.length;
+    updateHeroContent();
+  });
+</script>
+
+
+  <!--DIV3-->
+  <div class="div3-container">
+    <div class="div3-inner">
+      <h2>Explore Our Eco-Friendly Plastic</h2>
+      <p>Discover our range of sustainable plastic alternatives designed to meet your needs.</p>
+    </div>
+    <div class="div3-bottom">
+      <div class="div3-box" style="background-image: url('images/box-3\ \(1\).png');">
+        <h3><strong>Recycled Plastic Panels</strong></h3>
+        <p>Durable panels for construction</p>
       </div>
-      
- 
+      <div class="div3-box" style="background-image: url('images/box-3\ \(2\).png');">
+        <h3><strong>Eco-friendly Furniture</strong></h3>
+        <p>Stylish, eco-friendly furniture</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(3\).png');">
+        <h3><strong>Plastic as Sustainable Flooring</strong></h3>
+        <p>Strong, sustainable flooring</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(6\).png');">
+        <h3><strong>Environmentally Conscious Design</strong></h3>
+        <p>Eco Design</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(5\).png');">
+        <h3><strong>Green Innovation</strong></h3>
+        <p>Innovative Solutions</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(4\).png');">
+        <h3><strong>New Colored Plastics</strong></h3>
+        <p>Innovative and sustainable solutions for a brighter future.</p>
+      </div>
+    </div>
   </div>
   <div class="container my-5">
     <h2 class="text-center mb-4">Frequently Asked Questions</h2>
