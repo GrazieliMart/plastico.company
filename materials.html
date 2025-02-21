@@ -70,12 +70,131 @@
   width: 100%;
   object-fit: cover;
 }
+@media screen and (max-width: 1200px) {
+  body.dark-mode {
+  .div2-container {
+      background-color: #04080f;
+      color: white;
+      padding: 10px 20px;
+  }
+  
+  .quem-somos-direita {
+        width: 100%;
+        margin-top: -200px;
+        display: flex
+;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .quem-somos-mosaico img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+.quem-somos-esquerda {
+        width: 100%;
+        padding: 50px;
+    }
+    .quem-somos-esquerda h2 {
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.quem-somos-mosaico video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+} .div-pattern-left {
+    flex: 1;
+    padding: 40px;
+}
+.quem-somos-mosaico{
+  margin-bottom: 100px;
+}
+.div-pattern {
+  height: 800px;
+  padding-top: 100px;
+  margin-top: -50px;
+
+  display: grid
+;
+  align-items: center;
+}
+.div-pattern2 {
+  height: 100%;
+  display: grid
+;
+  align-items: center;
+}
+.div-pattern2-left img {
+  height: 300px;
+  width: 100%;
+  margin-top: 300px;
+  object-fit: cover;
+}
+}
+  .quem-somos-direita {
+        width: 100%;
+        margin-top: -200px;
+        display: flex
+;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .quem-somos-mosaico img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+}
+.quem-somos-esquerda {
+        width: 100%;
+        padding: 50px;
+    }
+    .quem-somos-esquerda h2 {
+    font-size: 45px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.quem-somos-mosaico video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+} .div-pattern-left {
+    flex: 1;
+    padding: 40px;
+}
+.quem-somos-mosaico{
+  margin-bottom: 100px;
+}
+.div-pattern {
+  height: 800px;
+  padding-top: 100px;
+  margin-top: -50px;
+  background-color: #f0f0f0;
+  display: grid
+;
+  align-items: center;
+}
+.div-pattern2 {
+  height: 100%;
+  display: grid
+;
+  align-items: center;
+}
+.div-pattern2-left img {
+  height: 300px;
+  width: 100%;
+  margin-top: 300px;
+  object-fit: cover;
+}
+
+}
+
 
     </style>
   </head>
   
 <body>
-
 
 <!-- NAVBAR PLASTICO -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -94,7 +213,7 @@
         <li class="nav-item"><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
         <li class="nav-item"><a class="nav-link" href="samples.html">Samples</a></li>  
         <li class="nav-item"><a class="nav-link" href="materials.html">Materials</a></li> 
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+  
         <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>  
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>        
       </ul>
@@ -174,7 +293,6 @@
     <button id="close-menu-btn">✖</button> <!-- Botão de fechar -->
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
       <li><a href="sustainability.html">Sustainability</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
@@ -185,8 +303,31 @@
     </ul>
   </div>
 </div>
+<!-- SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const closeMenuBtn = document.getElementById("close-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
 
+  // Abrir menu
+  mobileMenuBtn.addEventListener("click", function () {
+    mobileMenu.classList.add("show");
+  });
 
+  // Fechar menu
+  closeMenuBtn.addEventListener("click", function () {
+    mobileMenu.classList.remove("show");
+  });
+
+  // Fechar ao clicar em um link
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("show");
+    });
+  });
+});
+</script>
 <!-- SCRIPT -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -265,7 +406,7 @@
   <div class="div-pattern-left">
     <h2>Plastic Sheets</h2>
     <p>Each plastic sheet starts as 200 x 200mm with an unfinished edge, making them extremely versatile for all types of commercial projects.
-      <button></button>
+     
       And they can also be cut down, depending on your requirements. By adopting this approach, zero waste is created as every part of a board is put to use.
       <br><br>What’s more, when the decorative panels come to the end of their life, they can be repurposed or recycled – closing the loop on plastics.
       <br><br>Choose an eco-friendly material from one of our collections, or opt for something bespoke. Whichever route you take, individuality comes as standard.

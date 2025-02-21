@@ -33,115 +33,138 @@
 <body>
 
 
-
 <!-- NAVBAR PLASTICO -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img id="logo-img" src="images/logo-black-text.png" alt="Logo" width="50">
-      </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img id="logo-img" src="images/logo-black-text.png" alt="Logo" width="50">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+        <li class="nav-item"><a class="nav-link" href="samples.html">Samples</a></li>  
+        <li class="nav-item"><a class="nav-link" href="materials.html">Materials</a></li> 
   
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
-          <li class="nav-item"><a class="nav-link" href="samples.html">Samples</a></li>  
-          <li class="nav-item"><a class="nav-link" href="materials.html">Materials</a></li> 
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>  
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>        
+        <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>  
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>        
+      </ul>
+
+      <div class="ms-auto align-items-center" id="align-right"> 
+        <ul class="navbar-nav ms-auto">  
+          <li class="nav-item"><a class="nav-link" href="Shop.html"><button class="contact" id="align-contact">Shop <i class="bi bi-cart" id="shop"></i></button></a></li>
+          <li class="nav-item" id="bandeira">
+            <a class="nav-link" href="index.html" id="irish-company" data-bs-toggle="tooltip" data-bs-placement="right" title="An Irish Company">
+              <img src="assets/bandeira.jpg" alt="Company Logo" width="30" height="30">
+            </a>
+            <p class="tooltip-text ms-2">An Irish Company</p>
+          </li>
         </ul>
-  
-        <div class="ms-auto align-items-center" id="align-right"> 
-          <ul class="navbar-nav ms-auto">  
-            <li class="nav-item"><a class="nav-link" href="Shop.html"><button class="contact" id="align-contact">Shop <i class="bi bi-cart" id="shop"></i></button></a></li>
-            <li class="nav-item" id="bandeira">
-              <a class="nav-link" href="index.html" id="irish-company" data-bs-toggle="tooltip" data-bs-placement="right" title="An Irish Company">
-                <img src="assets/bandeira.jpg" alt="Company Logo" width="30" height="30">
-              </a>
-              <p class="tooltip-text ms-2">An Irish Company</p>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
-    <script>document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll("nav a, .mobile-menu a"); // Pega links da navbar e do mobile
-      const currentPath = window.location.pathname.split("/").pop(); // Obtém o nome da página atual
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a, .mobile-menu a"); // Pega links da navbar e do mobile
+    const currentPath = window.location.pathname.split("/").pop(); // Obtém o nome da página atual
+  
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop(); // Obtém o nome do link
+  
+      if (linkPath === currentPath) {
+        link.classList.add("active"); // Adiciona classe ativa ao link da página atual
+      }
+    });
+  });
     
-      navLinks.forEach(link => {
-        const linkPath = link.getAttribute("href").split("/").pop(); // Obtém o nome do link
-    
-        if (linkPath === currentPath) {
-          link.classList.add("active"); // Adiciona classe ativa ao link da página atual
+  </script>
+</nav>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarLinks = document.querySelectorAll(".nav-link");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          let bsCollapse = new bootstrap.Collapse(navbarCollapse);
+          bsCollapse.hide(); // Fecha o menu corretamente
         }
       });
     });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.querySelector(".switch-container input");
+    const logoImg = document.getElementById("logo-img");
+    const mobileLogoImg = document.querySelector(".mobile-logo img");
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
       
-    </script>
-  </nav>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const navbarLinks = document.querySelectorAll(".nav-link");
-      const navbarCollapse = document.querySelector(".navbar-collapse");
-  
-      navbarLinks.forEach(link => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth < 992) {
-            let bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide(); // Fecha o menu corretamente
-          }
-        });
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggleSwitch = document.querySelector(".switch-container input");
-      const logoImg = document.getElementById("logo-img");
-      const mobileLogoImg = document.querySelector(".mobile-logo img");
-  
-      function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-        
-        // Muda a imagem da logo principal (desktop)
-        logoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
-        
-        // Muda a imagem da logo mobile
-        mobileLogoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
-      }
-  
-      toggleSwitch.addEventListener("change", toggleDarkMode);
-    });
-  </script>
-  <!-- NAVBAR MOBILE -->
-  <div id="nav-mobile" class="d-lg-none">
-    <div class="mobile-header">
-      <a class="mobile-logo" href="index.html">
-        <img src="images/logo-black-text.png" alt="Logo" width="40">
-      </a>
-      <button id="mobile-menu-btn">☰</button>
-    </div>
-  
-    <div id="mobile-menu" class="mobile-menu">
-      <button id="close-menu-btn">✖</button> <!-- Botão de fechar -->
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="sustainability.html">Sustainability</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
-        <li><a class="nav-link" href="samples.html">Samples</a></li>  
-        <li><a class="nav-link" href="materials.html">Materials</a></li> 
-        <li><a class="nav-link" href="Shop.html">Shop</a></li>   
-        
-      </ul>
-    </div>
+      // Muda a imagem da logo principal (desktop)
+      logoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
+      
+      // Muda a imagem da logo mobile
+      mobileLogoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
+    }
+
+    toggleSwitch.addEventListener("change", toggleDarkMode);
+  });
+</script>
+<!-- NAVBAR MOBILE -->
+<div id="nav-mobile" class="d-lg-none">
+  <div class="mobile-header">
+    <a class="mobile-logo" href="index.html">
+      <img src="images/logo-black-text.png" alt="Logo" width="40">
+    </a>
+    <button id="mobile-menu-btn">☰</button>
   </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <button id="close-menu-btn">✖</button> <!-- Botão de fechar -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+      <li><a class="nav-link" href="samples.html">Samples</a></li>  
+      <li><a class="nav-link" href="materials.html">Materials</a></li> 
+      <li><a class="nav-link" href="Shop.html">Shop</a></li>   
+      
+    </ul>
+  </div>
+</div>
+<!-- SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const closeMenuBtn = document.getElementById("close-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  // Abrir menu
+  mobileMenuBtn.addEventListener("click", function () {
+    mobileMenu.classList.add("show");
+  });
+
+  // Fechar menu
+  closeMenuBtn.addEventListener("click", function () {
+    mobileMenu.classList.remove("show");
+  });
+
+  // Fechar ao clicar em um link
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("show");
+    });
+  });
+});
+</script>
 <!-- SCRIPT -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {

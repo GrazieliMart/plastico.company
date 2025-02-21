@@ -2177,6 +2177,31 @@ gap: 200px;
   transform: scale(1.1);
 }
 @media screen and (max-width: 1200px) {
+  .div-pattern-left {
+    flex: 1;
+    padding: 40px;
+}
+.div-pattern {
+  height: 800px;
+  padding-top: 100px;
+  margin-top: -50px;
+  background-color: #f0f0f0;
+  display: grid
+;
+  align-items: center;
+}
+.div-pattern2 {
+  height: 100%;
+  display: grid
+;
+  align-items: center;
+}
+.div-pattern2-left img {
+  height: 300px;
+  width: 100%;
+  margin-top: 300px;
+  object-fit: cover;
+}
   .exemplos {
     display: grid
 ;

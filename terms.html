@@ -54,7 +54,7 @@
         <li class="nav-item"><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
         <li class="nav-item"><a class="nav-link" href="samples.html">Samples</a></li>  
         <li class="nav-item"><a class="nav-link" href="materials.html">Materials</a></li> 
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+  
         <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>  
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>        
       </ul>
@@ -134,7 +134,6 @@
     <button id="close-menu-btn">✖</button> <!-- Botão de fechar -->
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
       <li><a href="sustainability.html">Sustainability</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
@@ -145,6 +144,31 @@
     </ul>
   </div>
 </div>
+<!-- SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+  const closeMenuBtn = document.getElementById("close-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  // Abrir menu
+  mobileMenuBtn.addEventListener("click", function () {
+    mobileMenu.classList.add("show");
+  });
+
+  // Fechar menu
+  closeMenuBtn.addEventListener("click", function () {
+    mobileMenu.classList.remove("show");
+  });
+
+  // Fechar ao clicar em um link
+  document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("show");
+    });
+  });
+});
+</script>
 
 <!-- SCRIPT -->
 <script>
