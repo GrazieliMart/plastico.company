@@ -1,85 +1,817 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - Coming Soon</title>
+    <title>Plastico Company | Sustainable Solutions in Ireland</title>
+    <meta name="description" content="Plastico Company provides sustainable and innovative solutions in Ireland. We focus on eco-friendly designs and materials for businesses.">
+    <meta name="keywords" content="Plastico Company, sustainability, eco-friendly design, Ireland, green business, sustainable solutions">
+    <meta name="author" content="Plastico Company">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (para compartilhamento em redes sociais) -->
+    <meta property="og:title" content="Plastico Company | Sustainable Solutions in Ireland">
+    <meta property="og:description" content="Plastico Company provides sustainable and innovative solutions in Ireland. We focus on eco-friendly designs and materials for businesses.">
+    <meta property="og:image" content="images/logo-black-text.png">
+    <meta property="og:url" content="https://seusite.com">
+    <meta property="og:type" content="website">
+  
+    <!-- Twitter Card (para compartilhamento no Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Plastico Company | Sustainable Solutions in Ireland">
+    <meta name="twitter:description" content="Plastico Company provides sustainable and innovative solutions in Ireland. We focus on eco-friendly designs and materials for businesses.">
+    <meta name="twitter:image" content="images/logo-black-text.png">
+  
+    <!-- Links e estilos -->
+    <link rel="stylesheet" href="css.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .cart-header {
+        .sustainability {
+            display: flex;
+            padding: 100px 200px;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            margin-bottom: 30px;
+            width: 100%;
         }
-        .cart-header h1 {
-            font-size: 36px;
-            color: #333;
+        .sustainability-content {
+            margin-bottom: 40px;
         }
-        .cart-message {
-            font-size: 20px;
-            color: #555;
-            text-align: center;
+        .sustainability-content h2{
+            font-weight: 900;
+            font-size: 45px;
         }
-        .cart-message p {
-            margin: 20px 0;
-        }
-        .cart-empty {
+        .sustainability-features {
             display: flex;
             justify-content: center;
-            align-items: center;
-            margin-top: 30px;
+            gap: 50px;
+            width: 100%;
         }
-        .cart-empty img {
-            width: 150px;
-            height: auto;
-            margin-right: 20px;
-        }
-        .btn-return {
-            display: inline-block;
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
+       .sustainability-feature {
+        max-width: 300px;
+        text-align: left;
+    }
+    .sustainability-feature h3{
+        font-weight: 900;
+        font-size: 20px;
+    }
+    .sustainability-feature p{
+       
+        font-size: 13px;
+    }
+        
+        .sustainability-feature img {
+            width: 300px;
+            margin-bottom: 20px;
             border-radius: 5px;
-            text-align: center;
-            margin-top: 20px;
+            height: 200px;
+            object-fit: cover;
         }
-        .btn-return:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    .video-div4 {
+        margin-top: -50px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+  
+
+    @media screen and (max-width: 1200px) {
+        .sustainability-content h2 {
+    font-weight: 900;
+    font-size: 25px;
+}
+.div3-container {
+        margin-bottom: 100px;
+        padding: 40px 40px;
+        background-color: #f5f5f5;
+        display: grid
+;
+    }
+.sustainability-feature {
+    max-width: none;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 120px;
+}
+.sustainability-features {
+    display: inline;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.sustainability-content p{
+    font-size: 13px;
+}
+        .video-div4 {
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.sustainability {
+    display: flex;
+    padding: 40px 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+    }  
+
+    body.dark-mode {    
+        .sustainability-content h2 {
+        font-weight: 900;
+        color: #fff;
+        font-size: 25px;
+    }
+    .accordion-button {
+        position: relative;
+        display: flex
+;
+        align-items: center;
+        width: 100%;
+        padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+        font-size: 1rem;
+        color: #ffffff;
+        text-align: left;
+        background-color: #000000;
+        border: 0;
+        border-radius: 0;
+        overflow-anchor: none;
+        transition: var(--bs-accordion-transition);
+    }
+    .sustainability-content p {
+        font-size: 13px;
+        color: #fff;
+    }    .sustainability-features {
+      
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+        color: #afadad;
+    }.accordion-item {
+    color: #757575;
+    background-color: #000000;
+    border: var(--bs-accordion-border-width) solid #051a3a;
+}
+.accordion-button:not(.collapsed) {
+        color: rgb(7 166 239);
+        font-weight: 900;
+        background-color: #04080f;
+        box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 #000000;
+    }
+    .text-center {
+    color: #fff;
+    text-align: center !important;
+}
+    .div-6 img {
+    height: 150px;
+}}
+   </style>
 </head>
+  
 <body>
-    <div class="container">
-        <div class="cart-header">
-            <h1>Shopping Cart</h1>
+
+<!-- NAVBAR PLASTICO -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+      <img id="logo-img" src="images/logo-black-text.png" alt="Logo" width="50">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+        <li class="nav-item"><a class="nav-link" href="samples.html">Samples</a></li>  
+        <li class="nav-item"><a class="nav-link" href="materials.html">Materials</a></li> 
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="sustainability.html">Sustainability</a></li>  
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>        
+      </ul>
+
+      <div class="ms-auto align-items-center" id="align-right"> 
+        <ul class="navbar-nav ms-auto">  
+          <li class="nav-item"><a class="nav-link" href="Shop.html"><button class="contact" id="align-contact">Shop <i class="bi bi-cart" id="shop"></i></button></a></li>
+          <li class="nav-item" id="bandeira">
+            <a class="nav-link" href="index.html" id="irish-company" data-bs-toggle="tooltip" data-bs-placement="right" title="An Irish Company">
+              <img src="assets/bandeira.jpg" alt="Company Logo" width="30" height="30">
+            </a>
+            <p class="tooltip-text ms-2">An Irish Company</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a, .mobile-menu a"); // Pega links da navbar e do mobile
+    const currentPath = window.location.pathname.split("/").pop(); // Obtém o nome da página atual
+  
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute("href").split("/").pop(); // Obtém o nome do link
+  
+      if (linkPath === currentPath) {
+        link.classList.add("active"); // Adiciona classe ativa ao link da página atual
+      }
+    });
+  });
+    
+  </script>
+</nav>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarLinks = document.querySelectorAll(".nav-link");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 992) {
+          let bsCollapse = new bootstrap.Collapse(navbarCollapse);
+          bsCollapse.hide(); // Fecha o menu corretamente
+        }
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.querySelector(".switch-container input");
+    const logoImg = document.getElementById("logo-img");
+    const mobileLogoImg = document.querySelector(".mobile-logo img");
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      
+      // Muda a imagem da logo principal (desktop)
+      logoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
+      
+      // Muda a imagem da logo mobile
+      mobileLogoImg.src = document.body.classList.contains("dark-mode") ? "images/modo-escuro.png" : "images/logo-black-text.png";
+    }
+
+    toggleSwitch.addEventListener("change", toggleDarkMode);
+  });
+</script>
+<!-- NAVBAR MOBILE -->
+<div id="nav-mobile" class="d-lg-none">
+  <div class="mobile-header">
+    <a class="mobile-logo" href="index.html">
+      <img src="images/logo-black-text.png" alt="Logo" width="40">
+    </a>
+    <button id="mobile-menu-btn">☰</button>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <button id="close-menu-btn">✖</button> <!-- Botão de fechar -->
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a class="nav-link" href="who_we_are.html">Who we are</a></li>     
+      <li><a class="nav-link" href="samples.html">Samples</a></li>  
+      <li><a class="nav-link" href="materials.html">Materials</a></li> 
+      <li><a class="nav-link" href="Shop.html">Shop</a></li>   
+      
+    </ul>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const closeMenuBtn = document.getElementById("close-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    // Abrir menu
+    mobileMenuBtn.addEventListener("click", function () {
+      mobileMenu.classList.add("show");
+    });
+
+    // Fechar menu
+    closeMenuBtn.addEventListener("click", function () {
+      mobileMenu.classList.remove("show");
+    });
+
+    // Fechar ao clicar em um link
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("show");
+      });
+    });
+  });
+</script>
+
+<!--SWITCH CLARO E ESCURO-->
+  <div class="switch-container" id="pc">
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider"></span>
+    </label>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleSwitch = document.querySelector(".switch input");
+        const body = document.body;
+
+        // Verifica se o usuário já ativou o modo escuro antes
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode");
+            toggleSwitch.checked = true;
+        }
+
+        // Alterna entre modo escuro e claro ao clicar no switch
+        toggleSwitch.addEventListener("change", function () {
+            if (this.checked) {
+                body.classList.add("dark-mode");
+                localStorage.setItem("dark-mode", "enabled");
+            } else {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("dark-mode", "disabled");
+            }
+        });
+    });
+</script>
+
+
+
+<div class="sustainability">
+    <div class="sustainability-content">  
+          <img src="images/logo-unic.png" alt="">
+        <h2>Your shopping cart is empty.</h2>
+      <br><br>
+    </div>
+    <div class="sustainability-features">
+        <div class="sustainability-feature">
+            <h3>Customized Solutions</h3>
+            <p>Tailored solutions to fit your unique <br>needs and sustainability <br> goals.</p>
+            <img src="images/sus (1).png" alt="Customized Solutions">
+            <br>
+            <p>Collaborate with us to create products that align with your vision and values.</p>
         </div>
-        <div class="cart-message">
-            <p>Currently, there are no products in your cart.</p>
-            <p>Unfortunately, our store is not yet open for sales, but soon we will have the best plastic sheet options for you!</p>
+        <div class="sustainability-feature">
+            <h3>Advanced Material Research</h3>
+            <p>We invest in research to develop materials that are both innovative and <br>sustainable.</p>
+            <img src="images/sus (2).png" alt="Advanced Material Research">
+            <br>
+            <p>Our team is dedicated to pioneering materials that redefine industry standards.</p>
         </div>
-        <div class="cart-empty">
-            <img src="https://via.placeholder.com/150" alt="Empty Cart Image">
-            <p>Your cart is empty.</p>
-        </div>
-        <div class="cart-message">
-            <p>Stay tuned for updates and don't miss out on the latest news!</p>
-        </div>
-        <div style="text-align: center;">
-            <a href="/" class="btn-return">Back to Homepage</a>
+        <div class="sustainability-feature">
+            <h3>Eco-conscious Packaging</h3>
+            <p>Our packaging solutions reduce environmental impact while maintaining quality.</p>
+            <img src="images/sus (3).png" alt="Eco-conscious Packaging">
+            <br>
+            <p>Utilizing renewable materials, our packaging solutions are designed to minimize waste.</p>
         </div>
     </div>
+</div>
+
+  
+
+  <!--FIXED DIV RIGHT BOTTOM-->
+  <div class="fixed-btn">
+    <div id="menuItems" class="menu-items">
+        <div class="dot" data-aos="fade-up"><a href="contact.html"><i class="bi bi-chat-left-dots-fill"></i></a></div>
+        <div class="dot" data-aos="fade-up" id="dot"><i class="bi bi-share-fill"></i></div>
+    </div>
+    <button id="toggleBtn" class="menu-btn">+</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const btn = document.getElementById('toggleBtn');
+    const menu = document.getElementById('menuItems');
+    const dots = document.querySelectorAll('.menu-items .dot');
+
+    btn.addEventListener('click', (event) => {
+        if (menu.classList.contains('show')) {
+            dots.forEach(dot => {
+                dot.classList.remove('fade-in');
+                dot.classList.add('fade-out');
+            });
+            setTimeout(() => {
+                menu.classList.remove('show');
+            }, 300); // Tempo da animação antes de remover
+        } else {
+            menu.classList.add('show');
+            dots.forEach((dot, index) => {
+                setTimeout(() => {
+                    dot.classList.remove('fade-out');
+                    dot.classList.add('fade-in');
+                }, index * 100); // Delay progressivo para cada dot
+            });
+        }
+        btn.classList.toggle('active');
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!btn.contains(event.target) && !menu.contains(event.target)) {
+            dots.forEach(dot => {
+                dot.classList.remove('fade-in');
+                dot.classList.add('fade-out');
+            });
+            setTimeout(() => {
+                menu.classList.remove('show');
+            }, 300);
+            btn.classList.remove('active');
+        }
+    });
+</script>
+
+<div class="div2-container d-flex" data-aos="fade-up">
+
+  <div class="div2-left">
+      <h2>Sustainability through Plastic Recycling in Ireland</h2>
+      <br>
+      <p>As a company committed to sustainability, we focus on the crucial task of recycling plastic waste in Ireland. With the increasing challenge of plastic pollution, we strive to turn discarded plastic into high-quality raw materials that can be reused. <br><br>Our goal is to reduce the environmental impact of plastic, conserve valuable resources, and contribute to a circular economy. <br><br>By giving plastic a second life, we take a significant step toward a cleaner, greener future for Ireland and the world.
+      </p>
+    </div>
+    
+
+</div>
+ 
+    
+
+  <!--DIV3-->
+  <div class="div3-container">
+    <div class="div3-inner">
+      <h2>Explore Our Eco-Friendly Plastic</h2>
+      <p>Discover our range of sustainable plastic alternatives designed to meet your needs.</p>
+    </div>
+    <div class="div3-bottom">
+      <div class="div3-box" style="background-image: url('images/box-3\ \(1\).png');">
+        <h3><strong>Recycled Plastic Panels</strong></h3>
+        <p>Durable panels for construction</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(2\).png');">
+        <h3><strong>Eco-friendly Furniture</strong></h3>
+        <p>Stylish, eco-friendly furniture</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(3\).png');">
+        <h3><strong>Plastic as Sustainable Flooring</strong></h3>
+        <p>Strong, sustainable flooring</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(6\).png');">
+        <h3><strong>Environmentally Conscious Design</strong></h3>
+        <p>Eco Design</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(5\).png');">
+        <h3><strong>Green Innovation</strong></h3>
+        <p>Innovative Solutions</p>
+      </div>
+      <div class="div3-box" style="background-image: url('images/box-3\ \(4\).png');">
+        <h3><strong>New Colored Plastics</strong></h3>
+        <p>Innovative and sustainable solutions for a brighter future.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-6">
+            <div class="accordion" id="faqLeft">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            What is Plastico Company?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqLeft">
+                        <div class="accordion-body">
+                            Plastico Company is a company focused on sustainability and the creation of innovative design solutions for businesses, including retail shops and brand activation projects.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            What services does Plastico Company offer?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                        <div class="accordion-body">
+                            We offer a variety of services including sustainable product design, retail store design, brand activation solutions, and consulting for eco-friendly business practices.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            What industries does Plastico Company work with?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                        <div class="accordion-body">
+                            We collaborate with various industries, including retail, hospitality, corporate branding, and sustainable product manufacturing.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            How does Plastico Company incorporate sustainability into its projects?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqLeft">
+                        <div class="accordion-body">
+                            We use recycled materials, eco-friendly production methods, and sustainable design principles to ensure minimal environmental impact.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-6">
+            <div class="accordion" id="faqRight">
+                <!-- FAQ 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            How can I contact Plastico Company?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                        <div class="accordion-body">
+                            You can reach us via phone at +353 83 848 1886, or through our email at [Your Contact Email Here]. We are happy to assist with any inquiries you may have.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                            Does Plastico Company work with international clients?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                        <div class="accordion-body">
+                            Yes, we work with clients worldwide, providing remote consultations and project development tailored to different markets.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 7 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                            Can I request a custom project with Plastico Company?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                        <div class="accordion-body">
+                            Absolutely! We specialize in tailor-made solutions to meet your specific branding and sustainability needs.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 8 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                            What makes Plastico Company different from other design firms?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqRight">
+                        <div class="accordion-body">
+                            Our commitment to sustainability, innovation, and custom design solutions sets us apart. We focus on eco-friendly materials and creative strategies to elevate your brand.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--DIV 5-->
+  <div class="div3-container">
+    <div class="div-5">
+      <div class="div-5-content">
+        <img src="images/favicon.png" alt="" id="img-div5">
+        <h2>Connect with Us</h2>
+        <p>Reach out to Plastico Company for inquiries about our sustainable solutions.
+
+        </p>
+      </div>
+      <div class="div-5-contact-options">
+        <div class="div-5-contact">
+          <img src="assets/contact-icons (1).png" alt="Contact 1">
+          <div class="div-5-contact-text">
+            <h2>General Inquiries
+            </h2>
+            <p>Contact us for more information about our products and services.</p>
+            <a href="contact.html"><button class="contact-now-btn">Contact Now →</button></a>
+          </div>
+        </div>
+        <div class="div-5-contact">
+          <img src="assets/contact-icons (2).png" alt="Contact 2">
+          <div class="div-5-contact-text">
+            <h2>Partnership            </h2>
+            <p>Explore our biggest partner.</p>
+           <a href="https://forja.works/"><button class="contact-now-btn">Take a Look →</button></a> 
+          </div>
+        </div>
+        <div class="div-5-contact">
+          <img src="assets/contact-icons (3).png" alt="Contact 3">
+          <div class="div-5-contact-text">
+            <h2>Social Info</h2>
+            <p>Follow us at Instagram</p>
+            <a href="https://www.instagram.com/plasti.company/"><button class="contact-now-btn">Follow Now →</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+
+  <!--DIV CARD1-->
+  <div class="overlay" id="overlay"></div>
+  <div class="card1" id="tooltipDiv">
+      <button class="close-btn" onclick="closeTooltip()">&times;</button>
+      <div class="card-details">
+        <div class="cardimg"><img src="assets/logo-color.png" alt=""></div>
+          <p class="text-title">Enjoying Plastico Company?</p>
+          <p class="text-body">So check out more of our work on <b>Instagram.</b></p><a href="https://www.instagram.com/plasti.company/"><button class="card-button">Go now!</button></a>
+      </div>
+      
+  </div>  <script>
+      setTimeout(() => {
+          document.getElementById("tooltipDiv").classList.add("show");
+          document.getElementById("overlay").classList.add("show");
+      },120000); // 60 segundos
+
+      function closeTooltip() {
+          document.getElementById("tooltipDiv").classList.remove("show");
+          document.getElementById("overlay").classList.remove("show");
+      }
+  </script>
+
+  <!--DIV CARD2-->
+  <div class="overlay" id="overlay2"></div>
+  <div class="card2" id="tooltipDiv2">
+    <button id="closeBtn1" class="close-btn1">&times;</button>
+      <div class="card-details2">
+      
+          <p class="text-title2">Share Plastic Company!</p>
+          <p class="text-body2">Help us spread the message about sustainability. <br>Follow and share on Instagram or Facebook!</p>
+       
+<ul class="wrapper">
+  
+  <li class="icon twitter" id="copyLinkIcon" class="icon link">
+    <span class="tooltip" id="copyTooltip">Copy</span>
+    <i class="bi bi-link-45deg"></i>
+  </li> 
+
+<!-- Mensagem de link copiado -->
+<div id="copiedMessage" class="copied-message">Link copied!</div>
+
+<script>
+    document.getElementById("copyLinkIcon").addEventListener("click", function () {
+        const link = "https://www.plastico.ie";
+        navigator.clipboard.writeText(link).then(() => {
+            // Mostra a mensagem "Link copied!"
+            const copiedMessage = document.getElementById("copiedMessage");
+            copiedMessage.classList.add("show");
+
+            // Remove a mensagem após 2 segundos
+            setTimeout(() => {
+                copiedMessage.classList.remove("show");
+            }, 2000);
+        });
+    });
+</script>
+ 
+<a href="https://www.instagram.com/plasti.company/"><li class="icon instagram">
+    <span class="tooltip">Instagram</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="1.2em"
+      fill="currentColor"
+      class="bi bi-instagram"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+      ></path>
+    </svg>
+  </li></a>
+</ul>
+
+      </div>
+  </div>
+  <script>
+    // Função para abrir a card2 e overlay2 ao clicar no botão de compartilhamento
+    document.getElementById("dot").addEventListener("click", function() {
+        document.getElementById("tooltipDiv2").classList.add("show");
+        document.getElementById("overlay2").classList.add("show");
+    });
+
+    // Função para fechar a card2 e overlay2 ao clicar no botão de fechar
+    document.getElementById("closeBtn1").addEventListener("click", function() {
+        document.getElementById("tooltipDiv2").classList.remove("show");
+        document.getElementById("overlay2").classList.remove("show");
+    });
+</script>
+
+
+  <!--DIV 8-->
+  <div id="div8"></div>
+
+  <script>
+      const div8 = document.getElementById("div8");
+
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > window.innerHeight / 2) {
+              div8.classList.add("show");
+          } else {
+              div8.classList.remove("show");
+          }
+      });
+
+      div8.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          setTimeout(() => div8.classList.remove("show"), 500);
+      });
+  </script>
+<!--FOOTER-->
+<footer class="footer">
+  <div class="left">
+      <img src="assets/logo-color.png" alt="Logo">
+      <p><i class="bi bi-envelope"></i> contact@plastico.ie</p>
+      <p><i class="bi bi-geo-alt-fill" id="geo" style="color: #fff;"></i> Ireland, Dublin</p>
+  </div>
+
+  <ul class="menu">
+      <li><h1>MENU</h1></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">About Us</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+     
+    
+  </ul>
+
+  <ul class="menu">
+      <li><h1>PRIVACY</h1></li>
+      <li><a href="privacy-police.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms of Use</a></li>
+    
+     
+  </ul>
+  <ul class="menu">
+    <li><h1>Follow Us</h1></li> <li><p>Stay connected with us on social media</p></li> 
+    <li><a href="https://www.facebook.com/profile.php?id=61565655740323&__cft__[0]=AZVoafYFw0so-oWShv3QtefZ5QH3m-OEOjexRSBJnb_IFDEuunZwlEyauiHMZ5hG6iJnoe8zRU7OO8UaeZU8HYKKt5ZRHkt3jlFtpu3jpSMH5rdAYaytuZ31NOVS7c7HFd9NmICaIB6JPzS--3twQ0oFLgcxsnbKH5k2sSrIkvhE1Me-mHJe6w95bbo5KpfT9Yr-vKO5W2RxqiIM5WEtVjH1&__tn__=-UC%2CP-R">   <i class="bi bi-facebook"></i></a> <a href="https://www.instagram.com/plasti.company/" style="margin-left: 20px;"><i class="bi bi-instagram"></i></a> </li>
+   
+  
+   
+</ul>
+ 
+  </div>
+</footer>
+
+<div class="footer-strip">
+  <p>© 2025 Plastico Company. All rights reserved. Created by <a href="https://marketinggdigital.com/" style="color: #007BFF; text-decoration: none; font-weight: 900;">GGDIGITAL</a></p>
+</div>  
+ 
+  <!-- Inclua a biblioteca AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
