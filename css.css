@@ -1827,7 +1827,7 @@ body.dark-mode { background-color: #04080f;
   cursor: pointer;
 }
 .card1 {
-  width: 400px;
+  width: 80%;
   height: 450px;
   border-radius: 20px;
   justify-content: center;
