@@ -766,18 +766,20 @@ body.dark-mode {
         <h1 >Get in Touch</h1>
         <p>Fill in the contact form below for questions, quotes, samples,
             or advice on your project.</p>
-            <form name="contact" method="POST" data-netlify="true">
-                <br><br>
+            <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data">
+                <input type="hidden" name="form-name" value="contact">
+                <input type="text" name="bot-field" style="display:none;">
+            
                 <label for="contact-reason">Contact Reason</label>
-                <select id="contact-reason" name="contact-reason" required placeholder="Contact Reason">
-                    <option value="" disabled selected>Request a Quote for a Project</option>
+                <select id="contact-reason" name="contact-reason" required>
+                    <option value="Request a Quote for a Project" selected>Request a Quote for a Project</option>
                     <option value="PR or Marketing Opportunity">PR or Marketing Opportunity</option>
                     <option value="Request Plastic Panels">Request Plastic Panels</option>
                     <option value="Other">Other</option>
                 </select>
             
                 <div id="other-reason" style="display:none;">
-                    <label for="contact-reason">Contact Reason</label>
+                    <label for="other-reason-input">Other Reason</label>
                     <input type="text" id="other-reason-input" name="other-reason" placeholder="What is the reason?" />
                 </div>
             
@@ -788,15 +790,15 @@ body.dark-mode {
                 <input type="tel" id="phone" name="phone" placeholder="Phone Number">
                 <textarea id="project-description" name="project-description" placeholder="Project Description" required></textarea>
             
-                <div id="attach-documents" >
+                <div id="attach-documents">
                     <h2>Drag & Drop Files Here</h2>
                     <p>Not Required</p>
                     <p>PDF, PWP, XLSX, ZIP, DOCX, PPTX, PNG, JPEG</p>
-                    <input type="file" id="files" name="files" multiple placeholder="Attach Documents (drawing, specifications, etc)">
+                    <input type="file" id="files" name="files" multiple>
                 </div>
             
-                <br><br><label for="how-did-you-hear">How did you hear about us?</label>
-                <select id="how-did-you-hear" name="how-did-you-hear" required placeholder="How did you hear about us?">
+                <label for="how-did-you-hear">How did you hear about us?</label>
+                <select id="how-did-you-hear" name="how-did-you-hear" required>
                     <option value="" disabled selected>Select an option</option>
                     <option value="Event">Event</option>
                     <option value="Instagram">Instagram</option>
@@ -814,10 +816,32 @@ body.dark-mode {
                     <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
                     I agree to the <a href="privacy-police.html">Privacy Policy</a>
                 </label>
-                <br>
             
                 <button type="submit">Send</button>
             </form>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const formElements = document.querySelectorAll(
+                        "input, select, textarea"
+                    );
+                
+                    formElements.forEach((element, index) => {
+                        element.addEventListener("keypress", function (event) {
+                            if (event.key === "Enter") {
+                                event.preventDefault(); // Impede o envio do formulário
+                
+                                // Encontra o próximo campo no formulário
+                                const nextElement = formElements[index + 1];
+                
+                                if (nextElement) {
+                                    nextElement.focus();
+                                }
+                            }
+                        });
+                    });
+                });
+                </script>
+                
             
             <script>
                 // Show input for "Other" reason
