@@ -2079,13 +2079,13 @@ gap: 200px;
   }
   .quem-somos-2-bloco:hover {
     padding: 20px;
-    background-color:#aaaaaa17 ;
+    background-color: #aaaaaa17;
     transition: 0.5s;
     margin-top: 100px;
     border: 2px solid #aaaaaa17;
     border-radius: 5px;
-      width: 100%;
-  }
+    width: 20%;
+}
   .quem-somos-2-bloco p {
      font-size: 12px;
   }
@@ -2182,6 +2182,15 @@ gap: 200px;
   .div-pattern-left {
     flex: 1;
     padding: 40px;
+}
+.quem-somos-2-bloco:hover {
+  padding: 20px;
+  background-color: #aaaaaa17;
+  transition: 0.5s;
+  margin-top: 100px;
+  border: 2px solid #aaaaaa17;
+  border-radius: 5px;
+  width: 100%;
 }
 .div-pattern {
   height: 800px;
