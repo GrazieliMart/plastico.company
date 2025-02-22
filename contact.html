@@ -766,7 +766,7 @@ body.dark-mode {
         <h1 >Get in Touch</h1>
         <p>Fill in the contact form below for questions, quotes, samples,
             or advice on your project.</p>
-            <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data">
+            <form name="contact" method="POST" data-netlify="true" enctype="multipart/form-data" id="demo-form">
                 <input type="hidden" name="form-name" value="contact">
                 <input type="text" name="bot-field" style="display:none;">
             
@@ -816,9 +816,20 @@ body.dark-mode {
                     <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
                     I agree to the <a href="privacy-police.html">Privacy Policy</a>
                 </label>
+                <button class="g-recaptcha" 
+        data-sitekey="6LcFb98qAAAAAEHYVDtgGDxvi_GSZC2yvE3BUgu8" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
             
                 <button type="submit">Send</button>
             </form>
+            <script src="https://www.google.com/recaptcha/api.js"></script>
+            <script>
+                function onSubmit(token) {
+                  document.getElementById("demo-form").submit();
+                }
+              </script>
+
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const formElements = document.querySelectorAll(
