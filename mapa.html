@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Animado - Dublin</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 100vh; width: 100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([53.349805, -6.26031], 13); // Centraliza em Dublin
+
+        // Adiciona o tile layer (imagens do mapa)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Definir a rota com as coordenadas fornecidas
+        const route = [
+            [53.322149858385394, -6.367697913057263], // Forja Works
+            [53.346571974267974, -6.2602291682238285], // Achara
+            [53.34353647107259, -6.264223317899359],   // Charlie
+            [53.28821046969509, -6.363366684783397],   // Olivez
+            [53.33729336114892, -6.234059935469401],   // Juniors
+            [53.27715552984286, -6.1038317712861705],  // Thyme Out
+            [53.33605921656318, -6.324011298084015],   // Rascals
+            [53.34221935862516, -6.263508329496231],   // LOOT
+            [53.36105804062161, -6.259536058029452],   // Juno
+            [52.98050902973974, -6.04675086571038]     // The Big Blue Bus
+        ];
+
+        // Adiciona marcador no primeiro ponto
+        const marker = L.marker(route[0]).addTo(map);
+
+        // Adiciona a linha conectando os pontos
+        const polyline = L.polyline([], {color: 'blue', weight: 4, opacity: 0.7}).addTo(map);
+
+        let pathIndex = 0;
+
+        // Função para suavizar a animação de movimentação do marcador
+        function moveMarker() {
+            if (pathIndex < route.length - 1) {
+                const startLatLng = route[pathIndex];
+                const endLatLng = route[pathIndex + 1];
+                let step = 0;
+
+                function animateStep() {
+                    // Calcula o progresso da animação
+                    step += 0.05;
+                    if (step > 1) step = 1;
+
+                    // Interpola a posição entre os pontos
+                    const lat = startLatLng[0] + (endLatLng[0] - startLatLng[0]) * step;
+                    const lng = startLatLng[1] + (endLatLng[1] - startLatLng[1]) * step;
+
+                    marker.setLatLng([lat, lng]); // Atualiza o marcador
+                    map.panTo([lat, lng]); // Move o mapa
+
+                    // Atualiza a linha (cresce conforme a animação do marcador)
+                    const latlngs = route.slice(0, pathIndex + 1);
+                    polyline.setLatLngs(latlngs);
+
+                    if (step < 1) {
+                        requestAnimationFrame(animateStep); // Continua a animação
+                    } else {
+                        pathIndex++;
+                        setTimeout(moveMarker, 1000); // Aguarda 1 segundo antes de começar o próximo ponto
+                    }
+                }
+
+                requestAnimationFrame(animateStep); // Inicia a animação
+            }
+        }
+
+        // Iniciar a animação
+        setTimeout(moveMarker, 1000);
+    </script>
+</body>
+</html>
